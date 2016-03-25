@@ -1,4 +1,4 @@
-package TrafficSimulador;
+package Logic;
 
 public class Signals implements IConstants {
 	

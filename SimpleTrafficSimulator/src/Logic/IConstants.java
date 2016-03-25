@@ -1,3 +1,4 @@
+package Logic; 
 
 public interface IConstants {
 	public static String _sentido;

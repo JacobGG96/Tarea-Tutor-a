@@ -1,3 +1,7 @@
+package Logic;
+
+import simpletrafficsimulator.IConstants;
+
 
 public class Stright implements IConstants {
 	
