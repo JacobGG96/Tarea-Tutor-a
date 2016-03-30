@@ -1,5 +1,7 @@
 package Logic;
 
+import Listas.GenericList;
+
 /**
  *
  * @author gustavo
