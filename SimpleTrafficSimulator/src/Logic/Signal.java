@@ -6,27 +6,43 @@ package Logic;
  */
 public class Signal {
     
-    private String Type_sg;
-    private int State_sg;
+    private String _type;
+    private int _state;
 
     public Signal() {
  
     }
-
+    
+    /**
+     * 
+     * @return 
+     */
     public String getType_sg() {
-        return Type_sg;
+        return _type;
     }
-
+    
+    /**
+     * 
+     * @return 
+     */
     public int getState_sg() {
-        return State_sg;
+        return _state;
+    }
+    
+    /**
+     * 
+     * @param pType 
+     */
+    public void setType_sg(String pType) {
+        this._type = pType;
     }
 
-    public void setType_sg(String type_msg) {
-        this.Type_sg = type_msg;
-    }
-
-    public void setState_sg(int state_msg) {
-        this.State_sg = state_msg;
+    /**
+     * 
+     * @param pState 
+     */
+    public void setState_sg(int pState) {
+        this._state = pState;
     }
 
 }

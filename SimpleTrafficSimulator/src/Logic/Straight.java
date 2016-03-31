@@ -6,22 +6,22 @@ package Logic;
  */
 public class Straight extends Highway{
     
-    private int Direction_st;
+    private int _direction;
     
     /**
      * 
      * @return 
      */
     public int getDirection_st() {
-        return Direction_st;
+        return _direction;
     }
     
     /**
      * 
-     * @param direction_mst 
+     * @param pDirection 
      */
-    public void setDirection_st(int direction_mst) {
-        this.Direction_st = direction_mst;
+    public void setDirection_st(int pDirection) {
+        this._direction = pDirection;
     }
     
     

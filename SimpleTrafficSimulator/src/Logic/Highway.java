@@ -6,19 +6,19 @@ package Logic;
  */
 public class Highway {
     
-    private int Identifier_hw;
-    private int Distance_hw;
-    private int SpeedLim_hw;
-    private int Incline_hw;
-    private int Way_hw;
-    private int LanesWay_hw;
+    private int _identifier;
+    private int _distance;
+    private int _speedLim;
+    private int _incline;
+    private int _way;
+    private int _lanesWay;
     
     /**
      * 
      * @return 
      */
     public int getIdentifier_hw() {
-        return Identifier_hw;
+        return _identifier;
     }
     
     /**
@@ -26,7 +26,7 @@ public class Highway {
      * @return 
      */
     public int getDistance_hw() {
-        return Distance_hw;
+        return _distance;
     }
     
     /**
@@ -34,7 +34,7 @@ public class Highway {
      * @return 
      */
     public int getSpeedLim_hw() {
-        return SpeedLim_hw;
+        return _speedLim;
     }
     
     /**
@@ -42,7 +42,7 @@ public class Highway {
      * @return 
      */
     public int getIncline_hw() {
-        return Incline_hw;
+        return _incline;
     }
     
     /**
@@ -50,59 +50,59 @@ public class Highway {
      * @return 
      */
     public int getWay_hw() {
-        return Way_hw;
+        return _way;
     }
 
     public int getLanesWay_hw() {
-        return LanesWay_hw;
+        return _lanesWay;
     }
     
     /**
      * 
-     * @param identifier_mhw 
+     * @param pIdentifier 
      */
-    public void setIdentifier_hw(int identifier_mhw) {
-        this.Identifier_hw = identifier_mhw;
+    public void setIdentifier_hw(int pIdentifier) {
+        this._identifier = pIdentifier;
     }
     
     /**
      * 
-     * @param distance_mhw 
+     * @param pDistance 
      */
-    public void setDistance_hw(int distance_mhw) {
-        this.Distance_hw = distance_mhw;
+    public void setDistance_hw(int pDistance) {
+        this._distance = pDistance;
     }
     
     /**
      * 
-     * @param speedLim_mhw 
+     * @param pSpeedLim 
      */
-    public void setSpeedLim_hw(int speedLim_mhw) {
-        this.SpeedLim_hw = speedLim_mhw;
+    public void setSpeedLim_hw(int pSpeedLim) {
+        this._speedLim = pSpeedLim;
     }
     
     /**
      * 
-     * @param incline_mhw 
+     * @param pIncline 
      */
-    public void setIncline_hw(int incline_mhw) {
-        this.Incline_hw = incline_mhw;
+    public void setIncline_hw(int pIncline) {
+        this._incline = pIncline;
     }
     
     /**
      * 
-     * @param way_mhw 
+     * @param pWay 
      */
-    public void setWay_hw(int way_mhw) {
-        this.Way_hw = way_mhw;
+    public void setWay_hw(int pWay) {
+        this._way = pWay;
     }
     
     /**
      * 
-     * @param lanesWay_mhw 
+     * @param pLanesWay 
      */
-    public void setLanesWay_hw(int lanesWay_mhw) {
-        this.LanesWay_hw = lanesWay_mhw;
+    public void setLanesWay_hw(int pLanesWay) {
+        this._lanesWay = pLanesWay;
     }
     
     

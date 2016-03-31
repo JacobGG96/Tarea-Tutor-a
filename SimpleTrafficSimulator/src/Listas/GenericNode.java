@@ -18,16 +18,16 @@ public class GenericNode {
         return _next;
     }
 
-    public void setNext(GenericNode _next) {
-        this._next = _next;
+    public void setNext(GenericNode pNext) {
+        this._next = pNext;
     }
 
     public IDato getDato() {
         return _dato;
     }
 
-    public void setDato(IDato _dato) {
-        this._dato = _dato;
+    public void setDato(IDato pDato) {
+        this._dato = pDato;
     }
 
     

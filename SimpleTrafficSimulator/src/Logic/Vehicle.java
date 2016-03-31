@@ -6,23 +6,18 @@ package Logic;
  */
 public class Vehicle extends Thread{
     
-    private String Type_v;
-    private int Lenght_v;
-    private int Width_v;
-    private int MaxSpeed_v;
-    private int ActualSpeed_v;
-    private boolean InHighway_v;
-    private int DamageProbability_v;
+    private String _type;
+    private int _lenght;
+    private int _width;
+    private int _maxSpeed;
+    private int _actualSpeed;
+    private boolean _inHighway;
+    private int _damageProbability;
     
     /**
      * 
      */
     public Vehicle(){
-        
-        this.InHighway_v = false;
-        this.Lenght_v = 10;
-        this.Width_v = 5;
-        this.Type_v = "Automovil";
 
     }
     
@@ -32,7 +27,7 @@ public class Vehicle extends Thread{
      */
     public void SpeedUp_v(int increase_mv){
         
-        this.ActualSpeed_v = this.ActualSpeed_v + increase_mv;
+        this._actualSpeed = this._actualSpeed + increase_mv;
     }
     
     /**
@@ -41,7 +36,7 @@ public class Vehicle extends Thread{
      */
     public void SpeedDown_v(int decrease_mv){
         
-        this.ActualSpeed_v = this.ActualSpeed_v - decrease_mv;
+        this._actualSpeed = this._actualSpeed - decrease_mv;
     }
     
     /**
@@ -49,7 +44,7 @@ public class Vehicle extends Thread{
      */
     public void Crash_v(){
         
-        this.ActualSpeed_v = 0;
+        this._actualSpeed = 0;
     }
     
     /**
@@ -65,7 +60,7 @@ public class Vehicle extends Thread{
      * @return 
      */
     public String getType_v() {
-        return Type_v;
+        return _type;
     }
     
     /**
@@ -73,7 +68,7 @@ public class Vehicle extends Thread{
      * @return 
      */
     public int getLenght_v() {
-        return Lenght_v;
+        return _lenght;
     }
     
     /**
@@ -81,7 +76,7 @@ public class Vehicle extends Thread{
      * @return 
      */
     public int getWidth_v() {
-        return Width_v;
+        return _width;
     }
     
     /**
@@ -89,7 +84,7 @@ public class Vehicle extends Thread{
      * @return 
      */
     public int getMaxSpeed_v() {
-        return MaxSpeed_v;
+        return _maxSpeed;
     }
     
     /**
@@ -97,7 +92,7 @@ public class Vehicle extends Thread{
      * @return 
      */
     public int getActualSpeed_v() {
-        return ActualSpeed_v;
+        return _actualSpeed;
     }
     
     /**
@@ -105,7 +100,7 @@ public class Vehicle extends Thread{
      * @return 
      */
     public boolean isInHighway_v() {
-        return InHighway_v;
+        return _inHighway;
     }
     
     /**
@@ -113,63 +108,63 @@ public class Vehicle extends Thread{
      * @return 
      */
     public int getDamageProbability_v() {
-        return DamageProbability_v;
+        return _damageProbability;
     }
     
     /**
      * 
-     * @param type_mv 
+     * @param pType 
      */
-    public void setType_v(String type_mv) {
-        this.Type_v = type_mv;
+    public void setType_v(String pType) {
+        this._type = pType;
     }
     
     /**
      * 
-     * @param lenght_mv 
+     * @param pLenght 
      */
-    public void setLenght_v(int lenght_mv) {
-        this.Lenght_v = lenght_mv;
+    public void setLenght_v(int pLenght) {
+        this._lenght = pLenght;
     }
     
     /**
      * 
-     * @param width_mv 
+     * @param pWidth 
      */
-    public void setWidth_v(int width_mv) {
-        this.Width_v = width_mv;
+    public void setWidth_v(int pWidth) {
+        this._width = pWidth;
     }
     
     /**
      * 
-     * @param maxSpeed_mv 
+     * @param pMaxSpeed 
      */
-    public void setMaxSpeed_v(int maxSpeed_mv) {
-        this.MaxSpeed_v = maxSpeed_mv;
+    public void setMaxSpeed_v(int pMaxSpeed) {
+        this._maxSpeed = pMaxSpeed;
     }
     
     /**
      * 
-     * @param actualSpeed_mv 
+     * @param pActualSpeed 
      */
-    public void setActualSpeed_v(int actualSpeed_mv) {
-        this.ActualSpeed_v = actualSpeed_mv;
+    public void setActualSpeed_v(int pActualSpeed) {
+        this._actualSpeed = pActualSpeed;
     }
     
     /**
      * 
-     * @param inHighway_mv 
+     * @param pInHighway 
      */
-    public void setInHighway_v(boolean inHighway_mv) {
-        this.InHighway_v = inHighway_mv;
+    public void setInHighway_v(boolean pInHighway) {
+        this._inHighway = pInHighway;
     }
     
     /**
      * 
-     * @param damageProbability_mv 
+     * @param pDamageProbability 
      */
-    public void setDamageProbability_v(int damageProbability_mv) {
-        this.DamageProbability_v = damageProbability_mv;
+    public void setDamageProbability_v(int pDamageProbability) {
+        this._damageProbability = pDamageProbability;
     }
        
 }

@@ -6,22 +6,22 @@ package Logic;
  */
 public class Curve extends Highway{
     
-    private int Radius_cv;
+    private int _radius;
     
     /**
      * 
      * @return 
      */
     public int getRadius_cv() {
-        return Radius_cv;
+        return _radius;
     }
 
     /**
      * 
-     * @param radius_mcv 
+     * @param pRadius 
      */
-    public void setRadius_cv(int radius_mcv) {
-        this.Radius_cv = radius_mcv;
+    public void setRadius_cv(int pRadius) {
+        this._radius = pRadius;
     }
     
     
