@@ -77,26 +77,22 @@ public class QueueArray<T> {
         
         if(isEmpty())
             System.out.println("Esta vacía");
+        
         else{
-            
             boolean a = _flag;
-            //int j = _index;
-            if(_flag){
-                for(int i = _index ; i < _queuesize ; i++){    
-                    System.out.println(_queue[i]);
-                }
-            }
             
-            else{
-                for(int i = _index ; ( !a && i >= _tail)  || (a && i < _tail) ; i++){ 
-                    if(i == _queuesize){
-                        i = 0;
-                        a = true;
-                    }
-                    
-                    System.out.println(_queue[i]);
+            for(int i = _index ; a && i < _tail ||
+                !a && i >= _tail  || a && i < _tail; i++){    
+                
+                if(i == _queuesize){
+                    i = 0;
+                    a = true;
                 }
-            }
+
+                System.out.println(_queue[i]);              
+
+            }    
+                
         }    
     }
 }
