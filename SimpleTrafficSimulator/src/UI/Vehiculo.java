@@ -1,4 +1,5 @@
-package vehiculos;
+package UI;
+import UI.Main;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 

@@ -22,7 +22,16 @@ public class GenericList {
         }
     }
     
-    
+    public void insertarAlFinal(IDato elemento) {
+        if (isEmpty()) {
+            _head = _tail = new GenericNode(elemento);
+        }
+        else {
+            GenericNode nodo = new GenericNode(elemento);
+            _tail.setNext(nodo);
+            _tail = _tail.getNext();
+        }
+    }
     
     
 }
