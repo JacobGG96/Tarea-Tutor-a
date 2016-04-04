@@ -1,23 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Main;
 
 import Logic.*;
+import Listas.*;
 
 
-/**
- *
- * @author Daniel
- */
 public class SimpleTrafficSimulator {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
+        QueueArray<Integer> a = new QueueArray(Integer.class, 5);
+            
+            a.enqueue(1);
+            a.enqueue(2);
+            a.enqueue(3);
+            a.enqueue(4);
+            a.enqueue(5);
+            
+            a.dequeue();
+            a.dequeue();
+            a.dequeue();
+            a.dequeue();
+            
+            a.enqueue(6);
+            a.enqueue(7);
+            
+           // a.dequeue();
+           // a.dequeue();
+            //a.dequeue();
+            
+            a.imprimir();
 
     }
     
