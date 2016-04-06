@@ -12,6 +12,18 @@ public class Highway {
     private int _incline;
     private int _way;
     private int _lanesWay;
+
+    public Highway(int pIdentifier, int pDistance, int pSpeedLim, int pIncline, int pWay, int pLanesWay) {
+        this._identifier = pIdentifier;
+        this._distance = pDistance;
+        this._speedLim = pSpeedLim;
+        this._incline = pIncline;
+        this._way = pWay;
+        this._lanesWay = pLanesWay;
+    }
+    
+ 
+    
     
     /**
      * 
