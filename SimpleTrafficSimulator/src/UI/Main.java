@@ -24,34 +24,11 @@ public class Main extends JPanel{
 	}
 	
 	public static void main(String[] args) {
-		/**JFrame frame = new JFrame("Traffic");
-		frame.setSize(665, 500);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/
-            
-            QueueArray<Integer> a = new QueueArray(Integer.class, 5);
-            
-            a.enqueue(1);
-            a.enqueue(2);
-            a.enqueue(3);
-            a.enqueue(4);
-            a.enqueue(5);
-            
-            a.dequeue();
-            a.dequeue();
-            a.dequeue();
-            a.dequeue();
-            
-            a.enqueue(6);
-            a.enqueue(7);
-            
-           // a.dequeue();
-           // a.dequeue();
-            //a.dequeue();
-            
-            a.imprimir();
-            
-
-
-}
+            JFrame frame = new JFrame("Traffic");
+            frame.setSize(665, 500);
+            frame.setVisible(true);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        }
+        
+        
 }
