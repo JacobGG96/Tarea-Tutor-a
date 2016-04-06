@@ -13,6 +13,7 @@ public class Vehicle extends Thread{
     private int _actualSpeed;
     private boolean _inHighway;
     private int _damageProbability;
+    private int _prueba;
     
     /**
      * 
