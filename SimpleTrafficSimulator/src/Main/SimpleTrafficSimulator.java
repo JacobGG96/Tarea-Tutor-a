@@ -1,13 +1,14 @@
 package Main;
 
-import Logic.*;
-import Listas.*;
+import XMLParser.XMLWriter;
 
-
-public class SimpleTrafficSimulator {
+public class SimpleTrafficSimulator extends XMLWriter {
 
     public static void main(String[] args) {
-        QueueArray<Integer> a = new QueueArray(Integer.class, 5);
+    	writeXML();
+       
+       
+    	 /*QueueArray<Integer> a = new QueueArray(Integer.class, 5);
             
             a.enqueue(1);
             a.enqueue(2);
@@ -27,8 +28,9 @@ public class SimpleTrafficSimulator {
            // a.dequeue();
             //a.dequeue();
             
-            a.imprimir();
+            a.imprimir();*/
 
-    }
+		
+	}
     
 }
