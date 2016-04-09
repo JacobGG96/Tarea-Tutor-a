@@ -2,6 +2,11 @@ package Listas;
 
 import java.lang.reflect.Array;
 
+/**
+ * Clase arreglo tipo cola
+ * 
+ * @param <T> tipo de la clase
+ */
 public class QueueArray<T> {
     private T[] _queue;
     private int _queuesize;
@@ -10,6 +15,12 @@ public class QueueArray<T> {
     private boolean _flag;
     private Class<T> _arrayclass;
     
+    /**
+     * Constructor de la clase
+     * 
+     * @param c tipo del objeto
+     * @param pSize tamaño que va a tener el arreglo
+     */
     public QueueArray (Class<T> c, int pSize){
         _queue = (T[]) Array.newInstance(c, pSize); //new T[pSize];
         _queuesize = pSize;
@@ -19,15 +30,27 @@ public class QueueArray<T> {
         this._arrayclass = c;
     }
     
+    /**
+     * Verifica si el arreglo esta lleno
+     * @return <code>true:</code> si esta lleno, <code>false</code> de
+     * lo contrario
+     */
     public boolean isFull(){
         return (_flag && (_index == 0 && _tail == _queuesize)) ||
                 (!_flag && _index == _tail);        
     }
     
+    /**
+     * Verifica si el arreglo esta vacio
+     * @return 
+     */
     public boolean isEmpty(){
         return ((_index == _tail) && _flag);
     }
     
+    /**
+     * Aumenta el tamaño del arreglo
+     */
     private void resize(){
         int newsize = (_queuesize / 2) + _queuesize;
         T[] newqueue;
@@ -47,6 +70,10 @@ public class QueueArray<T> {
         _queue = newqueue;
     }
     
+    /**
+     * Agrega un elemento al final de la fila
+     * @param pDato elemento que se agrega a la lista
+     */
     public void enqueue (T pDato){
         if(isFull()){
             resize();
@@ -61,6 +88,10 @@ public class QueueArray<T> {
         
     }
     
+    /**
+     * Elimina el primer elemento del arreglo
+     * @return el primer elemento del arreglo
+     */
     public T dequeue(){
         if(isEmpty())
             System.out.println("lleno");
@@ -73,10 +104,13 @@ public class QueueArray<T> {
         return _queue[_index++]; 
     }
     
+    /**
+     * Imprime los elementos del arreglo
+     */
     public void imprimir(){
         
         if(isEmpty())
-            System.out.println("Esta vacía");
+            System.out.println("Esta vacía, no hay mosntruos aqui");
         
         else{
             boolean a = _flag;
