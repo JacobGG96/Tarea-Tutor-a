@@ -11,7 +11,7 @@ import org.jdom2.input.SAXBuilder;
 public class XMLReader {
     //Se crea un SAXBuilder para poder parsear el archivo
     SAXBuilder builder = new SAXBuilder();
-    File xmlFile = new File( "newXMLDocument.xml" );
+    File xmlFile = new File( "Carreteras.xml" );
     
     public void cargarXML(){
     
@@ -23,7 +23,7 @@ public class XMLReader {
             Element rootNode = document.getRootElement();
 
             //Se obtiene la lista de hijos de la raiz 'tables'
-            List list = rootNode.getChildren( "tabla" );
+            List list = rootNode.getChildren( "tabla" ).;
 
             //Se recorre la lista de hijos de 'tables'
             for ( int i = 0; i < list.size(); i++ ){
@@ -33,7 +33,7 @@ public class XMLReader {
                 //Se obtiene el atributo 'nombre' que esta en el tag 'tabla'
                 String nombreTabla = tabla.getAttributeValue("nombre");
 
-                System.out.println( "Tabla: " + nombreTabla );
+                //System.out.println( "Tabla: " + nombreTabla );
 
                 //Se obtiene la lista de hijos del tag 'tabla'
                 List lista_campos = tabla.getChildren();

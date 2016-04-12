@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<carreteras>
+    <carretera nombre= "San José" distancia = "1000">
+        <tramos>
+            <recta pendiente = "0" direccion = "180" velmax = "80">
+                <subtramo>
+                    
+                </subtramo>
+            </recta>
+            
+            <curva pendiente = "0" radio = "5" velmax = "30">
+                <subtramo>
+                    
+                </subtramo>
+            </curva>
+        </tramos>
+    </carretera>
+    
+    <carretera nombre= "Cartago" distancia = "1000">
+        <tramos>
+            <recta pendiente = "0" direccion = "180" velmax = "80">
+                <subtramo>
+                    
+                </subtramo>
+            </recta>
+            
+            <curva pendiente = "0" radio = "5" velmax = "30">
+                <subtramo>
+                    
+                </subtramo>
+            </curva>
+        </tramos>
+    </carretera>       
+    
+      
+</carreteras>
