@@ -1,32 +1,53 @@
 package Listas;
 
-public class GenericNode {
+/**
+ * Clase para nodos genéricos
+ * 
+ * @param <T> tipo de dato del elemento
+ */
+public class GenericNode<T> {
     private GenericNode _next;
-    private IDato _dato;
+    private T _dato;
     
-    public GenericNode (IDato pDato){
+    public GenericNode (T pDato){
         _next = null;
         _dato = pDato;
     }
     
-    public GenericNode (IDato pDato, GenericNode pNode){
+    public GenericNode (T pDato, GenericNode pNode){
         this._dato = pDato;
         this._next = pNode;
     }
 
+    /**
+     * Devuelve el nodo siguiente
+     * @return _next
+     */
     public GenericNode getNext() {
         return _next;
     }
 
+    /**
+     * Configura _next
+     * @param pNext nodo generico
+     */
     public void setNext(GenericNode pNext) {
         this._next = pNext;
     }
 
-    public IDato getDato() {
+    /**
+     * Devuelve el dato del nodo
+     * @return T el dato del nodo
+     */
+    public T getDato() {
         return _dato;
     }
 
-    public void setDato(IDato pDato) {
+    /**
+     * 
+     * @param pDato 
+     */
+    public void setDato(T pDato) {
         this._dato = pDato;
     }
 
