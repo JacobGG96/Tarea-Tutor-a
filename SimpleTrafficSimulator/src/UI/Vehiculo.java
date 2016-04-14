@@ -4,14 +4,12 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
 public class Vehiculo {
-	private static final int width = 30;
-	private static final int height = 50;
+	private static final int width = 5;
+	private static final int height = 5;
 	private int posX;
 	private int posY;
-	private Main main;
 
-	public Vehiculo(Main main, int posX, int posY){
-		this.main=main;
+	public Vehiculo(int posX, int posY){
 		this.posX=posX;
 		this.posY=posY;
 	}
