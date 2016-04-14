@@ -31,10 +31,6 @@ public class Vehiculo {
 	}	
 	
 	public void paint(Graphics2D g) {
-		g.fillRect(posX,posY,width,height);
-	}
-	
-	public Rectangle getBounds() {
-		return new Rectangle(this.posX,this.posY,width,height);
+		g.fillOval(posX,posY,width,height);
 	}
 }
