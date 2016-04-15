@@ -4,10 +4,16 @@ package Logic;
  *
  * @author gustavo
  */
-public class Straight extends Highway{
+public class Straight {
     
     private int _direction;
-    
+
+    public Straight(int _direction, String pIdentifier, int pDistance, int pSpeedLim, double pIncline, int pWay, int pLanesWay) {
+        super(pIdentifier, pDistance, pSpeedLim, pIncline, pWay, pLanesWay);
+        this._direction = _direction;
+    }
+
+
     /**
      * 
      * @return 

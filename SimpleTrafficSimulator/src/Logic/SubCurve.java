@@ -11,8 +11,10 @@ package Logic;
  */
 public class SubCurve extends Curve{
 
-    public SubCurve() {
+    public SubCurve(int _radius, String pIdentifier, int pDistance, int pSpeedLim, double pIncline, int pWay, int pLanesWay) {
+        super(_radius, pIdentifier, pDistance, pSpeedLim, pIncline, pWay, pLanesWay);
+    }
 
-    }   
+ 
     
 }

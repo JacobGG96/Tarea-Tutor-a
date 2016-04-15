@@ -10,7 +10,7 @@ import Listas.*;
 
 public class Main extends JPanel{
 	private static final long serialVersionUID = 1L;
-	Vehiculo v1 = new Vehiculo(this, 30, 50);
+	Vehiculo v1 = new Vehiculo(30, 50);
 	Calle c1= new Calle(50,60,432,333);
 	
 	public void paint(Graphics g) {

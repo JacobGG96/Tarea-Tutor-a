@@ -2,7 +2,7 @@ package Listas;
 
 /**
  * 
- * @author Daniel
+ * @author 
  * @param <T> 
  */
 public class GenericList<T> {

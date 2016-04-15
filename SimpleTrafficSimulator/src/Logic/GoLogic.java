@@ -2,6 +2,8 @@ package Logic;
 
 import Listas.*;
 
+
+
 /**
  *
  * @author gustavo
@@ -9,6 +11,8 @@ import Listas.*;
 public class GoLogic {
     
     public static void main (String args[]){
-
+        
+        
+        
     }
 }

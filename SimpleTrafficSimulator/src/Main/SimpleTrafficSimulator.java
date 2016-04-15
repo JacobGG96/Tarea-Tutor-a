@@ -1,35 +1,24 @@
 package Main;
 
+import Logic.Highway;
+import Logic.Vehicle;
 import XMLParser.XMLWriter;
 
 public class SimpleTrafficSimulator extends XMLWriter {
 
     public static void main(String[] args) {
-    	writeXML();
-       
-       
-    	 /*QueueArray<Integer> a = new QueueArray(Integer.class, 5);
-            
-            a.enqueue(1);
-            a.enqueue(2);
-            a.enqueue(3);
-            a.enqueue(4);
-            a.enqueue(5);
-            
-            a.dequeue();
-            a.dequeue();
-            a.dequeue();
-            a.dequeue();
-            
-            a.enqueue(6);
-            a.enqueue(7);
-            
-           // a.dequeue();
-           // a.dequeue();
-            //a.dequeue();
-            
-            a.imprimir();*/
-
+    	
+        Highway newHighway = new Highway("SJ-CA",70,80, 0.7,1,2);
+        
+        Vehicle vehiculo1 = new Vehicle("Automovil",10,5,240,80,true,40);
+        Vehicle vehiculo2 = new Vehicle("Camion",10,5,240,80,true,40);
+        Vehicle vehiculo3 = new Vehicle("Camion",10,5,240,80,true,40);
+        
+        newHighway.getNewHighway().enqueue(vehiculo1);
+        newHighway.getNewHighway().enqueue(vehiculo2);
+        newHighway.getNewHighway().enqueue(vehiculo3);
+        
+        System.out.println(newHighway.getNewHighway().dequeue().getType_v());
 		
 	}
     

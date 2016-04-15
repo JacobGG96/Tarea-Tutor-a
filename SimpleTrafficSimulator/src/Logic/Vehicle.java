@@ -13,30 +13,41 @@ public class Vehicle extends Thread{
     private int _actualSpeed;
     private boolean _inHighway;
     private int _damageProbability;
+    private int _remainDistance;
+    private int _delay;
     
-    /**
-     * 
-     */
-    public Vehicle(){
 
+    public Vehicle(String pType, int pLenght, int pWidth, int pMaxSpeed, int pActualSpeed, boolean pInHighway, int pDamageProbability) {
+        this._type = pType;
+        this._lenght = pLenght;
+        this._width = pWidth;
+        this._maxSpeed = pMaxSpeed;
+        this._actualSpeed = pActualSpeed;
+        this._inHighway = pInHighway;
+        this._damageProbability = pDamageProbability;
     }
     
     /**
      * 
+     */
+    
+        
+    /**
+     * 
      * @param increase_mv 
      */
-    public void SpeedUp_v(int increase_mv){
+    public void SpeedUp_v(int pIncrease){
         
-        this._actualSpeed = this._actualSpeed + increase_mv;
+        this._actualSpeed = this._actualSpeed + pIncrease;
     }
     
     /**
      * 
      * @param decrease_mv 
      */
-    public void SpeedDown_v(int decrease_mv){
+    public void SpeedDown_v(int pDecrease){
         
-        this._actualSpeed = this._actualSpeed - decrease_mv;
+        this._actualSpeed = this._actualSpeed - pDecrease;
     }
     
     /**
@@ -51,8 +62,11 @@ public class Vehicle extends Thread{
      * 
      */
     @Override
-    public void run(){
-        
+    public void run(){      
+        while (this._inHighway == true){
+            this.setDelay(_delay);
+            
+        }
     }
     
     /**
@@ -166,5 +180,39 @@ public class Vehicle extends Thread{
     public void setDamageProbability_v(int pDamageProbability) {
         this._damageProbability = pDamageProbability;
     }
+    
+    /**
+     * 
+     * @return 
+     */
+    public int getRemainDistance() {
+        return _remainDistance;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public int getDelay() {
+        return _delay;
+    }
+    
+    /**
+     * 
+     * @param pRemainDistance 
+     */
+    public void setRemainDistance(int pRemainDistance) {
+        this._remainDistance = pRemainDistance;
+    }
+    
+    /**
+     * 
+     * @param pDelay 
+     */
+    public void setDelay(int pDelay) {
+        this._delay = pDelay;
+    }
+    
+    
        
 }
