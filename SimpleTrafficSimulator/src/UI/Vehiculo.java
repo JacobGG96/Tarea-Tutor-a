@@ -29,6 +29,7 @@ public class Vehiculo {
 	}	
 	
 	public void paint(Graphics2D g) {
+		g.setColor(Color.RED)
 		g.fillOval(posX,posY,width,height);
 	}
 }
