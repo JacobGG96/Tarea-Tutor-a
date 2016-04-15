@@ -9,10 +9,6 @@ import Listas.*;
 
 
 public class Main extends JPanel{
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	Vehiculo v1 = new Vehiculo(this, 30, 50);
 	Calle c1= new Calle(50,60,432,333);
@@ -27,6 +23,8 @@ public class Main extends JPanel{
 	
 	public static void main(String[] args) {
             JFrame frame = new JFrame("Traffic");
+            Main main = new Main();
+            frame.add(main);
             frame.setSize(665, 500);
             frame.setVisible(true);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
