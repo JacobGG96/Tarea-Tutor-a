@@ -28,14 +28,15 @@ public class GenericListHw<T> {
      * 
      * @param pId 
      * @param pDistance 
+     * @param pSentidos 
      * @param pTramos 
      */
-    public void insertarAlFrente(T pId, T pDistance, T pTramos) {
+    public void insertarAlFrente(T pId, T pDistance, T pSentidos, T pTramos) {
         if(isEmpty()) {
-            _head = _tail = new GenericNodeHw(pId,pDistance,pTramos);
+            _head = _tail = new GenericNodeHw(pId,pDistance, pSentidos, pTramos);
         }
         else {
-            GenericNodeHw nodo = new GenericNodeHw(pId, pDistance, pTramos, _head);//tengo una referencia al head
+            GenericNodeHw nodo = new GenericNodeHw(pId, pDistance, pSentidos, pTramos, _head);//tengo una referencia al head
             _head = nodo;          
         }
     }
@@ -44,14 +45,15 @@ public class GenericListHw<T> {
      * 
      * @param pId
      * @param pDistance
+     * @param pSentidos
      * @param pTramos
      */
-    public void insertarAlFinal(T pId, T pDistance, T pTramos) {
+    public void insertarAlFinal(T pId, T pDistance, T pSentidos, T pTramos) {
         if (isEmpty()) {
-            _head = _tail = new GenericNodeHw(pId,pDistance,pTramos);
+            _head = _tail = new GenericNodeHw(pId,pDistance, pSentidos, pTramos);
         }
         else {
-            GenericNodeHw nodo = new GenericNodeHw(pId,pDistance,pTramos);
+            GenericNodeHw nodo = new GenericNodeHw(pId,pDistance, pSentidos, pTramos);
             _tail.setNext(nodo);
             _tail = _tail.getNext();
         }
@@ -106,7 +108,7 @@ public class GenericListHw<T> {
         else {
             GenericNodeHw actual = _head;
             while (actual != null) {
-                System.out.println((String)actual.getId() + " " + (Integer)actual.getDistance() + " " + (Integer)actual.getTramos());
+                System.out.println((String)actual.getId() + " " + (Integer)actual.getDistancia() + " " + (Integer)actual.getTramos());
                 actual = actual.getNext();
             }
         }    
