@@ -10,65 +10,19 @@ package Logic;
  */
 public class Section {
     
-    private final String _identifier;
-    private final int _sectionPosition;
-    private final int _distance;
+    private String _id;
     private int _direction;
     private int _radius;
-    private final int _speedLim;
-    private final double _incline;
-    private final int _way;
-    private final int _lanesWay;
 
-    public Section(String pIdentifier, int pSectionPosition,int pDistance, int pDirection, int pRadius, int pSpeedLim, double pIncline, int pWay, int pLanesWay) {
-        this._identifier = pIdentifier;
-        this._sectionPosition = pSectionPosition;
-        this._distance = pDistance;
-        this._speedLim = pSpeedLim;
-        this._incline = pIncline;
-        this._way = pWay;
-        this._lanesWay = pLanesWay;
-        this.createSubSection(pDirection, pRadius);
-    }
-    
-    /**
-     * 
-     * @param pDirection
-     * @param pRadius 
-     */
-    private void createSubSection(int pDirection, int pRadius){
-        if (){
-            this._direction = pDirection;
-            
-        }
-        else{
-            this._radius = pRadius;
-        }
-        
-    }
-    
-    /**
-     * 
-     * @return 
-     */
-    public String getIdentifier() {
-        return _identifier;
-    }
-    
-    /**
-     * 
-     * @return 
-     */
-    public int getSectionPosition() {
-        return _sectionPosition;
+    public Section() {
     }
 
     /**
      * 
      * @return 
      */
-    public int getDistance() {
-        return _distance;
+    public String getId() {
+        return _id;
     }
 
     /**
@@ -89,50 +43,27 @@ public class Section {
 
     /**
      * 
-     * @return 
+     * @param pId 
      */
-    public int getSpeedLim() {
-        return _speedLim;
+    public void setId(String pId) {
+        this._id = pId;
     }
 
     /**
      * 
-     * @return 
+     * @param pDirection 
      */
-    public double getIncline() {
-        return _incline;
+    public void setDirection(int pDirection) {
+        this._direction = pDirection;
     }
 
     /**
      * 
-     * @return 
+     * @param pRadius 
      */
-    public int getWay() {
-        return _way;
+    public void setRadius(int pRadius) {
+        this._radius = pRadius;
     }
-
-    /**
-     * 
-     * @return 
-     */
-    public int getLanesWay() {
-        return _lanesWay;
-    }
-
-    /**
-     * 
-     * @param _direction 
-     */
-    public void setDirection(int _direction) {
-        this._direction = _direction;
-    }
-
-    /**
-     * 
-     * @param _radius 
-     */
-    public void setRadius(int _radius) {
-        this._radius = _radius;
-    }
-        
+    
+    
 }

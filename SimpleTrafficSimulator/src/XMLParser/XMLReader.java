@@ -12,44 +12,48 @@ import org.jdom2.input.SAXBuilder;
 public class XMLReader {
     //Se crea un SAXBuilder para poder parsear el archivo
     SAXBuilder builder = new SAXBuilder();
-    File xmlFile = new File( "Carreteras.xml" );
-    GenericList lista = new GenericList();  
+    File xmlFile = new File( "src/XMLParser/Carreteras.xml" );
+    GenericList listaGeneral = new GenericList();  
+    public int tamañolista;
     
-    public void cargarXML(){
+    public GenericList<GenericList> cargarXML(){
     
         try{
             //Se crea el documento a traves del archivo
             Document document = (Document) builder.build(xmlFile);
                
-            //Se obtiene la raiz 'tables'
+            //Se obtiene la raiz 'carreteras'
             Element rootNode = document.getRootElement();
 
-            //Se obtiene la lista de hijos de la raiz 'tables'
-            int tamañolista = rootNode.getChildren( "carretera" ).size();
+            //Se obtiene la lista de hijos de la raiz 'carreteras'
+            tamañolista = rootNode.getChildren( "carretera" ).size();
             
-            System.out.println(tamañolista);
-            //Se recorre la lista de hijos de 'tables'
+            System.out.println("La cantidad de carreteras es: " + tamañolista + "\n");
+            
+            //Se recorre la lista de hijos de 'carreteras'
             for ( int i = 0; i < tamañolista; i++ ){
-                //Se obtiene el elemento 'tabla'
+                //Se obtiene el elemento 'carretera'
                 Element a = (Element) rootNode.getChildren().get(i);
 
-                //Se obtiene el atributo 'nombre' que esta en el tag 'tabla'
+                //Se obtiene el atributo 'nombre' que esta en el tag 'carretera'
                 String nombreCarretera = a.getAttributeValue("nombre");
+                String distanciaCarretera = a.getAttributeValue("distancia");
                 
-                lista.insertarAlFinal(nombreCarretera);
+                GenericList listaDatos = new GenericList();
+                listaDatos.insertarAlFinal(nombreCarretera);
+                listaDatos.insertarAlFinal(distanciaCarretera);
                 
-                lista.imprimir();
-                
+                listaGeneral.insertarAlFinal(listaDatos);
             }
+            
         }
 
-        catch(IOException io ) {
+        catch(IOException | JDOMException io ) {
             System.out.println( io.getMessage() );
         }
-
-        catch ( JDOMException jdomex ) {
-            System.out.println( jdomex.getMessage() );
-        }
+        
+        
+        return listaGeneral;
     
     }
 }

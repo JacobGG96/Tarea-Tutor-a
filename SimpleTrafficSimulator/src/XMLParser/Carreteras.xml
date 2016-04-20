@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <carreteras>
-    <carretera nombre= "San José" distancia = "1000">
+    <carretera nombre= "San José-Cartago" distancia = "1000">
         <tramos>
             <recta pendiente = "0" direccion = "180" velmax = "80">
                 <subtramo>
@@ -17,7 +17,7 @@
         </tramos>
     </carretera>
     
-    <carretera nombre= "Cartago" distancia = "1000">
+    <carretera nombre= "Cartago-San José" distancia = "1000">
         <tramos>
             <recta pendiente = "0" direccion = "180" velmax = "80">
                 <subtramo>

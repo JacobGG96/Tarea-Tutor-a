@@ -12,7 +12,7 @@ public class GenericList<T> {
     /**
      * 
      */
-    public GenericList(){
+    public GenericList(){      
         _head = _tail = null;
     }
     
@@ -107,6 +107,10 @@ public class GenericList<T> {
             }
         }  
         System.out.println("");
+    }
+
+    public GenericNode getHead() {
+        return _head;
     }
     
     
