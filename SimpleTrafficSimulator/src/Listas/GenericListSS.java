@@ -21,34 +21,34 @@ public class GenericListSS<T> {
     
     /**
      * 
-     * @param pElemento 
-     * @param pElemento2 
-     * @param pElemento3
-     * @param pElemento4
+     * @param pId 
+     * @param pVelocidad 
+     * @param pInclinacion
+     * @param pCantcarri
      */
-    public void insertarAlFrente(T pElemento, T pElemento2, T pElemento3, T pElemento4) {
+    public void insertarAlFrente(T pId, T pVelocidad, T pInclinacion, T pCantcarri) {
         if(isEmpty()) {
-            _head = _tail = new GenericNodeSS(pElemento, pElemento2, pElemento3, pElemento4);
+            _head = _tail = new GenericNodeSS(pId, pVelocidad, pInclinacion, pCantcarri);
         }
         else {
-            GenericNodeSS nodo = new GenericNodeSS(pElemento, pElemento2, pElemento3, _head);//tengo una referencia al head
+            GenericNodeSS nodo = new GenericNodeSS(pId, pVelocidad, pInclinacion, _head);//tengo una referencia al head
             _head = nodo;          
         }
     }
     
     /**
      * 
-     * @param pElemento
-     * @param pElemento2
-     * @param pElemento3
-     * @param pElemento4
+     * @param pId
+     * @param pVelocidad
+     * @param pInclinacion
+     * @param pCantcarri
      */
-    public void insertarAlFinal(T pElemento, T pElemento2, T pElemento3, T pElemento4) {
+    public void insertarAlFinal(T pId, T pVelocidad, T pInclinacion, T pCantcarri) {
         if (isEmpty()) {
-            _head = _tail = new GenericNodeSS(pElemento, pElemento2, pElemento3, pElemento4);
+            _head = _tail = new GenericNodeSS(pId, pVelocidad, pInclinacion, pCantcarri);
         }
         else {
-            GenericNodeSS nodo = new GenericNodeSS(pElemento, pElemento2, pElemento3, pElemento4);
+            GenericNodeSS nodo = new GenericNodeSS(pId, pVelocidad, pInclinacion, pCantcarri);
             _tail.setNext(nodo);
             _tail = _tail.getNext();
         }
@@ -59,7 +59,7 @@ public class GenericListSS<T> {
             throw new Exception("No hay elementos en la lista");
         }
         else {
-            Object elemento = _head.get_id();
+            Object elemento = _head;
             if (_head == _tail) {
                 _head = _tail = null;
             }
@@ -75,7 +75,7 @@ public class GenericListSS<T> {
             throw new Exception("No hay elementos en la lista");
         }
         else {
-            Object elemento = _tail.get_id();
+            Object elemento = _tail;
             if (_head == _tail) {
                 _head = _tail = null;
             }
@@ -103,11 +103,11 @@ public class GenericListSS<T> {
         else {
             GenericNodeSS actual = _head;
             while (actual != null) {
-                System.out.println((String)actual.get_id() + (Integer)actual.get_velocidad() + (Integer)actual.get_inclinacion() + (Integer)actual.get_cantcarri());
+                System.out.println((String)actual.get_id() + " " + (Integer)actual.get_velocidad() + " " +
+                        (Integer)actual.get_inclinacion() + " " + (Integer)actual.get_cantcarri());
                 actual = actual.getNext();
             }
         }  
-        System.out.println("");
     }
 
     public GenericNodeSS getHead() {

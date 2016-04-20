@@ -26,32 +26,32 @@ public class GenericListHw<T> {
     
     /**
      * 
-     * @param pElemento 
-     * @param pElemento2 
-     * @param pElemento3 
+     * @param pId 
+     * @param pDistance 
+     * @param pTramos 
      */
-    public void insertarAlFrente(T pElemento, T pElemento2, T pElemento3) {
+    public void insertarAlFrente(T pId, T pDistance, T pTramos) {
         if(isEmpty()) {
-            _head = _tail = new GenericNodeHw(pElemento,pElemento2,pElemento3);
+            _head = _tail = new GenericNodeHw(pId,pDistance,pTramos);
         }
         else {
-            GenericNodeHw nodo = new GenericNodeHw(pElemento, pElemento2, pElemento3, _head);//tengo una referencia al head
+            GenericNodeHw nodo = new GenericNodeHw(pId, pDistance, pTramos, _head);//tengo una referencia al head
             _head = nodo;          
         }
     }
     
     /**
      * 
-     * @param pElemento
-     * @param pElemento2
-     * @param pElemento3
+     * @param pId
+     * @param pDistance
+     * @param pTramos
      */
-    public void insertarAlFinal(T pElemento, T pElemento2, T pElemento3) {
+    public void insertarAlFinal(T pId, T pDistance, T pTramos) {
         if (isEmpty()) {
-            _head = _tail = new GenericNodeHw(pElemento,pElemento2,pElemento3);
+            _head = _tail = new GenericNodeHw(pId,pDistance,pTramos);
         }
         else {
-            GenericNodeHw nodo = new GenericNodeHw(pElemento,pElemento2,pElemento3);
+            GenericNodeHw nodo = new GenericNodeHw(pId,pDistance,pTramos);
             _tail.setNext(nodo);
             _tail = _tail.getNext();
         }
@@ -62,7 +62,7 @@ public class GenericListHw<T> {
             throw new Exception("No hay elementos en la lista");
         }
         else {
-            Object elemento = _head.getId();
+            Object elemento = _head;
             if (_head == _tail) {
                 _head = _tail = null;
             }
@@ -78,7 +78,7 @@ public class GenericListHw<T> {
             throw new Exception("No hay elementos en la lista");
         }
         else {
-            Object elemento = _tail.getId();
+            Object elemento = _tail;
             if (_head == _tail) {
                 _head = _tail = null;
             }
@@ -106,11 +106,10 @@ public class GenericListHw<T> {
         else {
             GenericNodeHw actual = _head;
             while (actual != null) {
-                System.out.println((String)actual.getId() + (Integer)actual.getDistance() + (Integer)actual.getTramos());
+                System.out.println((String)actual.getId() + " " + (Integer)actual.getDistance() + " " + (Integer)actual.getTramos());
                 actual = actual.getNext();
             }
-        }  
-        System.out.println("");
+        }    
     }
 
     public GenericNodeHw getHead() {

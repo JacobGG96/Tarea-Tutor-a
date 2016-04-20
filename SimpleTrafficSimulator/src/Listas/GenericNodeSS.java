@@ -2,25 +2,25 @@ package Listas;
 
 public class GenericNodeSS<T> {
     
-	private GenericNodeSS _next;
-	private T _id;
+    private GenericNodeSS _next;
+    private T _id;
     private T _velocidad;
     private T _inclinacion;
     private T _cantcarri;
     
-    public GenericNodeSS (T pDato, T pDato2, T pDato3, T pDato4){
+    public GenericNodeSS (T pId, T pVelocidad, T pInclinacion, T pCantcarri){
         this._next = null;
-        this._id = pDato;
-        this._velocidad = pDato2;
-        this._inclinacion = pDato3;
-        this._cantcarri = pDato4;
+        this._id = pId;
+        this._velocidad = pVelocidad;
+        this._inclinacion = pInclinacion;
+        this._cantcarri = pCantcarri;
     }
     
-    public GenericNodeSS (T pDato, T pDato2, T pDato3, T pDato4, GenericNodeSS pNode){
-        this._id = pDato;
-        this._velocidad = pDato2;
-        this._inclinacion = pDato3;
-        this._cantcarri = pDato4;
+    public GenericNodeSS (T pId, T pVelocidad, T pInclinacion, T pCantcarri, GenericNodeSS pNode){
+        this._id = pId;
+        this._velocidad = pVelocidad;
+        this._inclinacion = pInclinacion;
+        this._cantcarri = pCantcarri;
         this._next = pNode;
     }
 
@@ -56,31 +56,31 @@ public class GenericNodeSS<T> {
 		return _id;
 	}
 
-	public void set_id(T _id) {
-		this._id = _id;
+	public void set_id(T pId) {
+		this._id = pId;
 	}
 	
 	public T get_velocidad() {
 		return _velocidad;
 	}
 
-	public void set_velocidad(T _velocidad) {
-		this._velocidad = _velocidad;
+	public void set_velocidad(T pVelocidad) {
+		this._velocidad = pVelocidad;
 	}
 
 	public T get_inclinacion() {
 		return _inclinacion;
 	}
 
-	public void set_inclinacion(T _inclinacion) {
-		this._inclinacion = _inclinacion;
+	public void set_inclinacion(T pInclinacion) {
+		this._inclinacion = pInclinacion;
 	}
 
 	public T get_cantcarri() {
 		return _cantcarri;
 	}
 
-	public void set_cantcarri(T _cantcarri) {
-		this._cantcarri = _cantcarri;
+	public void set_cantcarri(T pCantcarri) {
+		this._cantcarri = pCantcarri;
 	}	 
 }

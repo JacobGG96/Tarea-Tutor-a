@@ -7,19 +7,19 @@ public class GenericNodeSec<T> {
     private T _radio;
     private T _subtramos;
     
-    public GenericNodeSec (T pDato, T pDato2, T pDato3, T pDato4){
+    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pSubtramos){
         this._next = null;
-        this._id = pDato;
-        this._direccion = pDato2;
-        this._radio = pDato3;
-        this._subtramos = pDato4;
+        this._id = pId;
+        this._direccion = pDireccion;
+        this._radio = pRadio;
+        this._subtramos = pSubtramos;
     }
     
-    public GenericNodeSec (T pDato, T pDato2, T pDato3, T pDato4, GenericNodeSec pNode){
-        this._id = pDato;
-        this._direccion = pDato2;
-        this._radio = pDato3;
-        this._subtramos = pDato4;
+    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pSubtramos, GenericNodeSec pNode){
+        this._id = pId;
+        this._direccion = pDireccion;
+        this._radio = pRadio;
+        this._subtramos = pSubtramos;
         this._next = pNode;
     }
 

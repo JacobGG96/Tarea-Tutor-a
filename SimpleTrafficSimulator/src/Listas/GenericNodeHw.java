@@ -8,20 +8,20 @@ package Listas;
 public class GenericNodeHw<T> {
     private GenericNodeHw _next;
     private T _id;
-    private T _distance;
+    private T _distancia;
     private T _tramos;
     
-    public GenericNodeHw (T pDato, T pDato2, T pDato3){
+    public GenericNodeHw (T pId, T pDistancia, T pTramos){
         this._next = null;
-        this._id = pDato;
-        this._distance = pDato2;
-        this._tramos = pDato3;
+        this._id = pId;
+        this._distancia = pDistancia;
+        this._tramos = pTramos;
     }
     
-    public GenericNodeHw (T pDato, T pDato2, T pDato3, GenericNodeHw pNode){
-        this._id = pDato;
-        this._distance = pDato2;
-        this._tramos = pDato3;
+    public GenericNodeHw (T pId, T pDistancia, T pTramos, GenericNodeHw pNode){
+        this._id = pId;
+        this._distancia = pDistancia;
+        this._tramos = pTramos;
         this._next = pNode;
     }
 
@@ -62,7 +62,7 @@ public class GenericNodeHw<T> {
      * @return 
      */
     public T getDistance() {
-        return _distance;
+        return _distancia;
     }
 
     /**
@@ -78,7 +78,7 @@ public class GenericNodeHw<T> {
      * @param pDistance 
      */
     public void setDistance(T pDistance) {
-        this._distance = pDistance;
+        this._distancia = pDistance;
     }
 
     /**
