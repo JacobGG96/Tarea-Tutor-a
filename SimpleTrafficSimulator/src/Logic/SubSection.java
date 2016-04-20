@@ -14,6 +14,7 @@ public class SubSection {
     public int _maxSpeed;
     public int _incline;
     public int _lanesWay;
+    private int _distance;
 
     public SubSection() {
     }
@@ -65,6 +66,23 @@ public class SubSection {
     public void setLanesWay(int pLanesWay) {
         this._lanesWay = pLanesWay;
     }
+
+    /**
+     * 
+     * @return 
+     */
+    public int getDistance() {
+        return _distance;
+    }
+
+    /**
+     * 
+     * @param pDistance 
+     */
+    public void setDistance(int pDistance) {
+        this._distance = pDistance;
+    }
+    
     
     
 }

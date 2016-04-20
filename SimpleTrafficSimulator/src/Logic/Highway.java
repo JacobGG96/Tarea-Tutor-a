@@ -1,6 +1,5 @@
 package Logic;
 
-import Listas.QueueArray;
 
 /**
  *
@@ -13,7 +12,7 @@ public class Highway {
     private int _ways;
 
     public Highway() {
-
+        
         
     }
  

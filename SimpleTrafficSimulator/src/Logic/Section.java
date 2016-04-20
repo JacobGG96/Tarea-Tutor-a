@@ -13,6 +13,8 @@ public class Section {
     private String _id;
     private int _direction;
     private int _radius;
+    private int _distance;
+    private int _freeSpace;
 
     public Section() {
     }
@@ -64,6 +66,31 @@ public class Section {
     public void setRadius(int pRadius) {
         this._radius = pRadius;
     }
+
+    /**
+     * 
+     * @return 
+     */
+    public int getDistance() {
+        return _distance;
+    }
+
+    /**
+     * 
+     * @param pDistance 
+     */
+    public void setDistance(int pDistance) {
+        this._distance = pDistance;
+    }
+
+    public int getFreeSpace() {
+        return _freeSpace;
+    }
+
+    public void setFreeSpace(int pFreeSpace) {
+        this._freeSpace = pFreeSpace;
+    }
+    
     
     
 }
