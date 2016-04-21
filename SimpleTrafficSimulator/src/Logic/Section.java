@@ -16,7 +16,8 @@ public class Section {
     private int _distance;
     private int _freeSpace;
 
-    public Section() {
+    public Section(Object pId, Object _direccion, Object _radio, Object _subtramos) {
+        
     }
 
     /**

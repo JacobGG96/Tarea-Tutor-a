@@ -1,5 +1,6 @@
 package Logic;
 
+import Listas.*;
 
 /**
  *
@@ -10,10 +11,15 @@ public class Highway {
     private String _identifier;
     private int _distance;
     private int _ways;
+    private GenericList _sections;
 
-    public Highway() {
+    public Highway(String pId, int pDistance, int pWays, GenericListSec pSections) {
         
-        
+        this._identifier = pId;
+        this._distance = pDistance;
+        this._ways = pWays;  
+                          
+        this._sections = generateSectionsList(pSections);
     }
  
     /** 
@@ -63,6 +69,45 @@ public class Highway {
      */
     public void setWays(int pWays) {
         this._ways = pWays;
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    public GenericList getSections() {
+        return _sections;
+    }
+
+    /**
+     * 
+     * @param _sections 
+     */
+    private GenericList generateSectionsList(GenericListSec pSections) {
+        
+        GenericList<Section> ListaSec = new GenericList();
+        
+        GenericNodeSec actual = pSections.getHead();
+        
+        while (actual!= null){
+            
+            Section seccion = new Section(actual.get_id(),actual.get_direccion(),actual.get_radio(),actual.get_subtramos());
+            ListaSec.insertarAlFinal(seccion);
+            actual = actual.getNext();
+      
+        }
+        
+        GenericNode nodoimprimir = ListaSec.getHead();
+        while (nodoimprimir != null){
+            Section objeto;
+            objeto = (Section) nodoimprimir.getDato();
+            System.out.println(objeto.getId());
+            System.out.println(objeto.getDistance());
+            System.out.println(objeto.getDirection());
+            System.out.println(objeto.getRadius());
+            nodoimprimir = nodoimprimir.getNext();
+        }
+        return ListaSec;
     }
     
     
