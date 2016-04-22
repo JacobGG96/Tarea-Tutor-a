@@ -5,20 +5,23 @@ public class GenericNodeSec<T> {
     private T _id;
     private T _direccion;
     private T _radio;
+    private T _distancia;
     private T _subtramos;
     
-    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pSubtramos){
+    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos){
         this._next = null;
         this._id = pId;
         this._direccion = pDireccion;
         this._radio = pRadio;
+        this._distancia = pDistancia;
         this._subtramos = pSubtramos;
     }
     
-    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pSubtramos, GenericNodeSec pNode){
+    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos, GenericNodeSec pNode){
         this._id = pId;
         this._direccion = pDireccion;
         this._radio = pRadio;
+        this._distancia = pDistancia;
         this._subtramos = pSubtramos;
         this._next = pNode;
     }
@@ -35,45 +38,90 @@ public class GenericNodeSec<T> {
      * Configura _next
      * @param pNext nodo generico
      */
+    public void setNext(GenericNodeSec pNext) {
+        this._next = pNext;
+    }
 
-	public void set_next(GenericNodeSec _next) {
-		this._next = _next;
-	}
-	
     /**
-     * Devuelve el dato del nodo
-     * @return T el dato del nodo
+     * 
+     * @return 
      */
-	
-	public T get_id() {
-		return _id;
-	}
+    public T getId() {
+        return _id;
+    }
 
-	public void set_id(T _id) {
-		this._id = _id;
-	}
+    /**
+     * 
+     * @return 
+     */
+    public T getDireccion() {
+        return _direccion;
+    }
 
-	public T get_direccion() {
-		return _direccion;
-	}
+    /**
+     * 
+     * @return 
+     */
+    public T getRadio() {
+        return _radio;
+    }
 
-	public void set_direccion(T _direccion) {
-		this._direccion = _direccion;
-	}
+    /**
+     * 
+     * @return 
+     */
+    public T getDistancia() {
+        return _distancia;
+    }
 
-	public T get_radio() {
-		return _radio;
-	}
+    /**
+     * 
+     * @return 
+     */
+    public T getSubtramos() {
+        return _subtramos;
+    }
 
-	public void set_radio(T _radio) {
-		this._radio = _radio;
-	}
+    /**
+     * 
+     * @param pId 
+     */
+    public void setId(T pId) {
+        this._id = pId;
+    }
 
-	public T get_subtramos() {
-		return _subtramos;
-	}
+    /**
+     * 
+     * @param pDireccion 
+     */
+    public void setDireccion(T pDireccion) {
+        this._direccion = pDireccion;
+    }
 
-	public void set_subtramos(T _subtramos) {
-		this._subtramos = _subtramos;
-	}  
+    /**
+     * 
+     * @param pRadio 
+     */
+    public void setRadio(T pRadio) {
+        this._radio = pRadio;
+    }
+
+    /**
+     * 
+     * @param pDistancia 
+     */
+    public void setDistancia(T pDistancia) {
+        this._distancia = pDistancia;
+    }
+
+    /**
+     * 
+     * @param pSubtramos 
+     */
+    public void setSubtramos(T pSubtramos) {
+        this._subtramos = pSubtramos;
+    }
+
+    
+        
 }

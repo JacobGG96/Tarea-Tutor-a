@@ -24,14 +24,15 @@ public class GenericListSec<T> {
      * @param pId 
      * @param pDireccion 
      * @param pRadio
+     * @param pDistancia
      * @param pSubtramos 
      */
-    public void insertarAlFrente(T pId, T pDireccion, T pRadio, T pSubtramos) {
+    public void insertarAlFrente(T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos) {
         if(isEmpty()) {
-            _head = _tail = new GenericNodeSec(pId, pDireccion, pRadio, pSubtramos);
+            _head = _tail = new GenericNodeSec(pId, pDireccion, pRadio, pDistancia, pSubtramos);
         }
         else {
-            GenericNodeSec nodo = new GenericNodeSec(pId, pDireccion, pRadio, pSubtramos, _head);//tengo una referencia al head
+            GenericNodeSec nodo = new GenericNodeSec(pId, pDireccion, pRadio, pDistancia, pSubtramos, _head);//tengo una referencia al head
             _head = nodo;          
         }
     }
@@ -41,15 +42,16 @@ public class GenericListSec<T> {
      * @param pId
      * @param pDireccion
      * @param pRadio
+     * @param pDistancia
      * @param pSubtramos
      */
-    public void insertarAlFinal(T pId, T pDireccion, T pRadio, T pSubtramos) {
+    public void insertarAlFinal(T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos) {
         if (isEmpty()) {
-            _head = _tail = new GenericNodeSec(pId, pDireccion, pRadio, pSubtramos);
+            _head = _tail = new GenericNodeSec(pId, pDireccion, pRadio, pDistancia, pSubtramos);
         }
         else {
-            GenericNodeSec nodo = new GenericNodeSec(pId, pDireccion, pRadio, pSubtramos);
-            _tail.set_next(nodo);
+            GenericNodeSec nodo = new GenericNodeSec(pId, pDireccion, pRadio, pDistancia, pSubtramos);
+            _tail.setNext(nodo);
             _tail = _tail.getNext();
         }
     }
@@ -83,11 +85,11 @@ public class GenericListSec<T> {
                 GenericNodeSec actual = _head, temporal;
                 while (actual.getNext() != _tail) {
                     temporal = actual.getNext();
-                    actual.set_next(temporal);
+                    actual.setNext(temporal);
                     //actual.setSiguienteNodo(actual.getSiguienteNodo());
                 }
                 _tail = actual;
-                actual.set_next(null);
+                actual.setNext(null);
             }
             return elemento;
         } 
@@ -103,8 +105,8 @@ public class GenericListSec<T> {
         else {
             GenericNodeSec actual = _head;
             while (actual != null) {
-                System.out.println((String)actual.get_id() + " " +
-                        (Integer)actual.get_direccion() + " " + (Integer)actual.get_radio() + " " + (Integer)actual.get_subtramos());
+                System.out.println((String)actual.getId() + " " + (Integer)actual.getDireccion() + " " + 
+                        (Integer)actual.getRadio() + " " + (Integer)actual.getDistancia() + "" + (Integer)actual.getSubtramos());
                 actual = actual.getNext();
             }
         }  

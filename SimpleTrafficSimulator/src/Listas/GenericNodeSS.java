@@ -7,20 +7,23 @@ public class GenericNodeSS<T> {
     private T _velocidad;
     private T _inclinacion;
     private T _cantcarri;
+    private T _distancia;
     
-    public GenericNodeSS (T pId, T pVelocidad, T pInclinacion, T pCantcarri){
+    public GenericNodeSS (T pId, T pVelocidad, T pInclinacion, T pCantcarri, T pDistancia){
         this._next = null;
         this._id = pId;
         this._velocidad = pVelocidad;
         this._inclinacion = pInclinacion;
         this._cantcarri = pCantcarri;
+        this._distancia = pDistancia;
     }
     
-    public GenericNodeSS (T pId, T pVelocidad, T pInclinacion, T pCantcarri, GenericNodeSS pNode){
+    public GenericNodeSS (T pId, T pVelocidad, T pInclinacion, T pCantcarri, T pDistancia, GenericNodeSS pNode){
         this._id = pId;
         this._velocidad = pVelocidad;
         this._inclinacion = pInclinacion;
         this._cantcarri = pCantcarri;
+        this._distancia = pDistancia;
         this._next = pNode;
     }
 
@@ -39,48 +42,86 @@ public class GenericNodeSS<T> {
     public void setNext(GenericNodeSS pNext) {
         this._next = pNext;
     }
-
-	public GenericNodeSS get_next() {
-		return _next;
-	}
-
-	public void set_next(GenericNodeSS _next) {
-		this._next = _next;
-	}
 	
     /**
      * Devuelve el dato del nodo
      * @return T el dato del nodo
      */
-	public T get_id() {
-		return _id;
-	}
+    public T getId() {
+	return _id;
+    }
 
-	public void set_id(T pId) {
-		this._id = pId;
-	}
-	
-	public T get_velocidad() {
-		return _velocidad;
-	}
+    /**
+     * 
+     * @param pId 
+     */
+    public void setId(T pId) {
+	this._id = pId;
+    }
 
-	public void set_velocidad(T pVelocidad) {
-		this._velocidad = pVelocidad;
-	}
+    /**
+     * 
+     * @return 
+     */
+    public T getVelocidad() {
+	return _velocidad;
+    }
 
-	public T get_inclinacion() {
-		return _inclinacion;
-	}
+    /**
+     * 
+     * @param pVelocidad 
+     */
+    public void setVelocidad(T pVelocidad) {
+	this._velocidad = pVelocidad;
+    }
 
-	public void set_inclinacion(T pInclinacion) {
-		this._inclinacion = pInclinacion;
-	}
+    /**
+     * 
+     * @return 
+     */
+    public T getInclinacion() {
+	return _inclinacion;
+    }
+    
+    /**
+     * 
+     * @param pInclinacion 
+     */
+    public void setInclinacion(T pInclinacion) {
+	this._inclinacion = pInclinacion;
+    }
 
-	public T get_cantcarri() {
-		return _cantcarri;
-	}
+    /**
+     * 
+     * @return 
+     */
+    public T getCantcarri() {
+	return _cantcarri;
+    }
 
-	public void set_cantcarri(T pCantcarri) {
-		this._cantcarri = pCantcarri;
-	}	 
+    /**
+     * 
+     * @param pCantcarri 
+     */
+    public void setCantcarri(T pCantcarri) {
+	this._cantcarri = pCantcarri;
+    }	
+
+    /**
+     * 
+     * @return 
+     */
+    public T getDistancia() {
+        return _distancia;
+    }
+
+    /**
+     * 
+     * @param pDistancia 
+     */
+    public void setDistancia(T pDistancia) {
+        this._distancia = pDistancia;
+    }
+        
+        
 }

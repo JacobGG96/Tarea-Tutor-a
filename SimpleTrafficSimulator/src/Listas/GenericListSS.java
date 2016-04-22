@@ -25,13 +25,14 @@ public class GenericListSS<T> {
      * @param pVelocidad 
      * @param pInclinacion
      * @param pCantcarri
+     * @param pDistancia
      */
-    public void insertarAlFrente(T pId, T pVelocidad, T pInclinacion, T pCantcarri) {
+    public void insertarAlFrente(T pId, T pVelocidad, T pInclinacion, T pCantcarri, T pDistancia) {
         if(isEmpty()) {
-            _head = _tail = new GenericNodeSS(pId, pVelocidad, pInclinacion, pCantcarri);
+            _head = _tail = new GenericNodeSS(pId, pVelocidad, pInclinacion, pCantcarri, pDistancia);
         }
         else {
-            GenericNodeSS nodo = new GenericNodeSS(pId, pVelocidad, pInclinacion, _head);//tengo una referencia al head
+            GenericNodeSS nodo = new GenericNodeSS(pId, pVelocidad, pInclinacion, pDistancia, _head);//tengo una referencia al head
             _head = nodo;          
         }
     }
@@ -42,13 +43,14 @@ public class GenericListSS<T> {
      * @param pVelocidad
      * @param pInclinacion
      * @param pCantcarri
+     * @param pDistancia
      */
-    public void insertarAlFinal(T pId, T pVelocidad, T pInclinacion, T pCantcarri) {
+    public void insertarAlFinal(T pId, T pVelocidad, T pInclinacion, T pCantcarri, T pDistancia) {
         if (isEmpty()) {
-            _head = _tail = new GenericNodeSS(pId, pVelocidad, pInclinacion, pCantcarri);
+            _head = _tail = new GenericNodeSS(pId, pVelocidad, pInclinacion, pCantcarri, pDistancia);
         }
         else {
-            GenericNodeSS nodo = new GenericNodeSS(pId, pVelocidad, pInclinacion, pCantcarri);
+            GenericNodeSS nodo = new GenericNodeSS(pId, pVelocidad, pInclinacion, pCantcarri, pDistancia);
             _tail.setNext(nodo);
             _tail = _tail.getNext();
         }
@@ -83,11 +85,11 @@ public class GenericListSS<T> {
                 GenericNodeSS actual = _head, temporal;
                 while (actual.getNext() != _tail) {
                     temporal = actual.getNext();
-                    actual.set_next(temporal);
+                    actual.setNext(temporal);
                     //actual.setSiguienteNodo(actual.getSiguienteNodo());
                 }
                 _tail = actual;
-                actual.set_next(null);
+                actual.setNext(null);
             }
             return elemento;
         } 
@@ -103,8 +105,8 @@ public class GenericListSS<T> {
         else {
             GenericNodeSS actual = _head;
             while (actual != null) {
-                System.out.println((String)actual.get_id() + " " + (Integer)actual.get_velocidad() + " " +
-                        (Integer)actual.get_inclinacion() + " " + (Integer)actual.get_cantcarri());
+                System.out.println((String)actual.getId() + " " + (Integer)actual.getVelocidad() + " " +
+                        (Integer)actual.getInclinacion() + " " + (Integer)actual.getCantcarri() + " " + (Integer)actual.getDistancia());
                 actual = actual.getNext();
             }
         }  
