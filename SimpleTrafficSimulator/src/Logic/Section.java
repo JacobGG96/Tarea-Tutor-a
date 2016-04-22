@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package Logic;
+
+import Listas.*;
+
 /**
  *
  * @author gustavo
@@ -15,8 +18,18 @@ public class Section {
     private int _radius;
     private int _distance;
     private int _freeSpace;
+    private GenericList _subSections;
 
-    public Section(Object pId, Object _direccion, Object _radio, Object _subtramos) {
+    public Section(String pId, int pDirection, int pRadius, int pDistance, GenericListSS _subtramos) {
+        
+        this._id = pId;
+        this._direction = pDirection;
+        this._radius = pRadius;
+        this._distance = pDistance;
+        this._freeSpace = pDistance;
+        
+        this._subSections = generateSubSection(_subtramos);
+        
         
     }
 
@@ -90,6 +103,12 @@ public class Section {
 
     public void setFreeSpace(int pFreeSpace) {
         this._freeSpace = pFreeSpace;
+    }
+
+    private GenericList generateSubSection(GenericListSS _subtramos) {
+        
+        GenericList ListaSS = new GenericList();
+        return ListaSS;        
     }
     
     

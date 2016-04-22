@@ -11,9 +11,10 @@ package Logic;
  */
 public class SubSection {
     
-    public int _maxSpeed;
-    public int _incline;
-    public int _lanesWay;
+    private String _id;
+    private int _maxSpeed;
+    private int _incline;
+    private int _lanesWay;
     private int _distance;
 
     public SubSection() {
@@ -81,6 +82,22 @@ public class SubSection {
      */
     public void setDistance(int pDistance) {
         this._distance = pDistance;
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    public String getId() {
+        return _id;
+    }
+
+    /**
+     * 
+     * @param pId 
+     */
+    public void setId(String pId) {
+        this._id = pId;
     }
     
     
