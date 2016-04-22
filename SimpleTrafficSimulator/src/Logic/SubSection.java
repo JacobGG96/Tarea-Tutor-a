@@ -17,7 +17,14 @@ public class SubSection {
     private int _lanesWay;
     private int _distance;
 
-    public SubSection() {
+    public SubSection(String pId, int pMaxSpeed, int pIncline, int pLanesWay, int pDistance) {
+        
+        this._id = pId;
+        this._maxSpeed = pMaxSpeed;
+        this._incline = pIncline;
+        this._lanesWay = pLanesWay;
+        this._distance = pDistance;   
+        
     }
 
     /**

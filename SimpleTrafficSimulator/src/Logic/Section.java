@@ -20,7 +20,7 @@ public class Section {
     private int _freeSpace;
     private GenericList _subSections;
 
-    public Section(String pId, int pDirection, int pRadius, int pDistance, GenericListSS _subtramos) {
+    public Section(String pId, int pDirection, int pRadius, int pDistance, GenericListSS pSubSections) {
         
         this._id = pId;
         this._direction = pDirection;
@@ -28,7 +28,7 @@ public class Section {
         this._distance = pDistance;
         this._freeSpace = pDistance;
         
-        this._subSections = generateSubSection(_subtramos);
+        this._subSections = generateSubSection(pSubSections);
         
         
     }
@@ -105,12 +105,37 @@ public class Section {
         this._freeSpace = pFreeSpace;
     }
 
-    private GenericList generateSubSection(GenericListSS _subtramos) {
+    private GenericList generateSubSection(GenericListSS pSubSections) {
         
-        GenericList ListaSS = new GenericList();
-        return ListaSS;        
-    }
-    
-    
-    
+        GenericList<SubSection> ListaSS = new GenericList();
+        
+        GenericNodeSS actual = pSubSections.getHead();
+        
+        while (actual!= null){
+            
+            SubSection subseccion = new SubSection((String)actual.getId(),(Integer)actual.getVelocidad(),(Integer)actual.getInclinacion(),
+                    (Integer)actual.getCantcarri(),(Integer)actual.getDistancia());
+            
+            ListaSS.insertarAlFinal(subseccion);
+            actual = actual.getNext();
+      
+        }
+        
+        GenericNode nodoimprimir = ListaSS.getHead();
+        while (nodoimprimir != null){
+            SubSection objeto;
+            objeto = (SubSection) nodoimprimir.getDato();
+            System.out.println(objeto.getId());
+            System.out.println(objeto.getMaxSpeed());
+            System.out.println(objeto.getIncline());
+            System.out.println(objeto.getLanesWay());
+            System.out.println(objeto.getDistance());
+            nodoimprimir = nodoimprimir.getNext();
+        }
+        return ListaSS;
+    }        
 }
+    
+    
+    
+
