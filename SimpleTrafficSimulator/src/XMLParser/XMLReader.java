@@ -13,7 +13,7 @@ public class XMLReader {
     //Se crea un SAXBuilder para poder parsear el archivo
     SAXBuilder builder = new SAXBuilder();
     File xmlFile = new File( "src/XMLParser/Carreteras.xml" );
-    GenericList listaGeneral = new GenericList();  
+    static GenericList listaGeneral = new GenericList();  
     public int tamañolista;
     
     public GenericList<GenericList> cargarXML(){
