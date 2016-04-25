@@ -31,7 +31,7 @@ public class GenericListHw<T> {
      * @param pSentidos 
      * @param pTramos 
      */
-    public void insertarAlFrente(T pId, T pDistance, T pSentidos, T pTramos) {
+    public void insertarAlFrente(T pId, T pDistance, T pSentidos, GenericListSec pTramos) {
         if(isEmpty()) {
             _head = _tail = new GenericNodeHw(pId,pDistance, pSentidos, pTramos);
         }
@@ -48,7 +48,7 @@ public class GenericListHw<T> {
      * @param pSentidos
      * @param pTramos
      */
-    public void insertarAlFinal(T pId, T pDistance, T pSentidos, T pTramos) {
+    public void insertarAlFinal(T pId, T pDistance, T pSentidos, GenericListSec pTramos) {
         if (isEmpty()) {
             _head = _tail = new GenericNodeHw(pId,pDistance, pSentidos, pTramos);
         }
@@ -108,7 +108,7 @@ public class GenericListHw<T> {
         else {
             GenericNodeHw actual = _head;
             while (actual != null) {
-                System.out.println((String)actual.getId() + " " + (Integer)actual.getDistancia() + " " + (Integer)actual.getTramos());
+                System.out.println((String)actual.getId() + " " + (Integer)actual.getDistancia() + " " + (GenericListSec)actual.getTramos());
                 actual = actual.getNext();
             }
         }    

@@ -10,9 +10,9 @@ public class GenericNodeHw<T> {
     private T _id;
     private T _distancia;
     private T _sentidos;
-    private T _tramos;
+    private GenericListSec _tramos;
     
-    public GenericNodeHw (T pId, T pDistancia, T pSentidos, T pTramos){
+    public GenericNodeHw (T pId, T pDistancia, T pSentidos, GenericListSec pTramos){
         this._next = null;
         this._id = pId;
         this._distancia = pDistancia;
@@ -20,7 +20,7 @@ public class GenericNodeHw<T> {
         this._tramos = pTramos;
     }
     
-    public GenericNodeHw (T pId, T pDistancia, T pSentidos, T pTramos, GenericNodeHw pNode){
+    public GenericNodeHw (T pId, T pDistancia, T pSentidos, GenericListSec pTramos, GenericNodeHw pNode){
         this._id = pId;
         this._distancia = pDistancia;
         this._tramos = pTramos;
@@ -80,7 +80,7 @@ public class GenericNodeHw<T> {
      * 
      * @return 
      */
-    public T getTramos() {
+    public GenericListSec getTramos() {
         return _tramos;
     }
 
@@ -104,7 +104,7 @@ public class GenericNodeHw<T> {
      * 
      * @param pTramos 
      */
-    public void setTramos(T pTramos) {
+    public void setTramos(GenericListSec pTramos) {
         this._tramos = pTramos;
     }
 
