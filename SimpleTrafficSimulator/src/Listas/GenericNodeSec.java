@@ -55,90 +55,77 @@ public class GenericNodeSec<T> {
         this._next = pNext;
     }
 
-	public GenericNodeSec get_next() {
-		return _next;
-	}
+    public T getId() {
+	return _id;
+    }
 
-	public void set_next(GenericNodeSec _next) {
-		this._next = _next;
-	}
+    public void setId(T pId) {
+    	this._id = _id;
+    }
 
-	public T get_id() {
-		return _id;
-	}
+    public T getDireccion() {
+    	return _direccion;
+    }
 
-	public void set_id(T _id) {
-		this._id = _id;
-	}
+    public void setDireccion(T pDireccion) {
+    	this._direccion = pDireccion;
+    }
 
-	public T get_direccion() {
-		return _direccion;
-	}
+    public T getRadio() {
+    	return _radio;
+    }
 
-	public void set_direccion(T _direccion) {
-		this._direccion = _direccion;
-	}
+    public void setRadio(T pRadio) {
+    	this._radio = pRadio;
+    }
+    
+    public GenericListSS getSubtramos() {
+    	return _subtramos;
+    }
 
-	public T get_radio() {
-		return _radio;
-	}
+    public void setSubtramos(GenericListSS pSubtramos) {
+    	this._subtramos = pSubtramos;
+    }
 
-	public void set_radio(T _radio) {
-		this._radio = _radio;
-	}
+    public T getPosXi() {
+    	return _posXi;
+    }
 
-	public GenericListSS get_subtramos() {
-		return _subtramos;
-	}
+    public void setPosXi(T pPosXi) {
+	this._posXi = pPosXi;
+    }
 
-	public void set_subtramos(GenericListSS _subtramos) {
-		this._subtramos = _subtramos;
-	}
+    public T getPosYi() {
+    	return _posYi;
+    }
 
-	public T get_posXi() {
-		return _posXi;
-	}
+    public void setPosYi(T pPosYi) {
+    	this._posYi = pPosYi;
+    }
 
-	public void set_posXi(T _posXi) {
-		this._posXi = _posXi;
-	}
+    public T getPosXf() {
+    	return _posXf;
+    }
 
-	public T get_posYi() {
-		return _posYi;
-	}
+    public void setPosXf(T pPosXf) {
+    	this._posXf = pPosXf;
+    }
 
-	public void set_posYi(T _posYi) {
-		this._posYi = _posYi;
-	}
+    public T getPosYf() {
+    	return _posYf;
+    }
 
-	public T get_posXf() {
-		return _posXf;
-	}
+    public void setPosYf(T pPosYf) {
+ 	this._posYf = pPosYf;
+    }
+    
+    public T getDistancia() {
+    	return _distancia;
+    }
 
-	public void set_posXf(T _posXf) {
-		this._posXf = _posXf;
-	}
-
-	public T get_posYf() {
-		return _posYf;
-	}
-
-	public void set_posYf(T _posYf) {
-		this._posYf = _posYf;
-	}
-
-	public T get_distancia() {
-		return _distancia;
-	}
-
-	public void set_distancia(T _distancia) {
-		this._distancia = _distancia;
-	}
-
-    /**
-     * 
-     * @return 
-     */
-	
+    public void setDistancia(T pDistancia) {
+    	this._distancia = pDistancia;
+    }
+    
 
 }

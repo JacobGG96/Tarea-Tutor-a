@@ -55,7 +55,7 @@ public class GenericListSec<T> {
         else {
 
             GenericNodeSec nodo = new GenericNodeSec(pId, pDireccion, pRadio, pSubtramos, pPosXi, pPosYi, pPosXf, pPosYf, pDistancia);
-            _tail.set_next(nodo);
+            _tail.setNext(nodo);
             _tail = _tail.getNext();
         }
     }
@@ -109,8 +109,8 @@ public class GenericListSec<T> {
         else {
             GenericNodeSec actual = _head;
             while (actual != null) {
-                System.out.println((String)actual.get_id() + " " + (Integer)actual.get_direccion() + " " + 
-                        (Integer)actual.get_radio() + " " + (Integer)actual.get_distancia() + "" + (GenericListSS)actual.get_subtramos());
+                System.out.println((String)actual.getId() + " " + (Integer)actual.getDireccion() + " " + 
+                        (Integer)actual.getRadio() + " " + (Integer)actual.getDistancia() + "" + (GenericListSS)actual.getSubtramos());
                 actual = actual.getNext();
             }
         }  
