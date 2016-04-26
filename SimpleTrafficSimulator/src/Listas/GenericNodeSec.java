@@ -5,14 +5,14 @@ public class GenericNodeSec<T> {
     private T _id;
     private T _direccion;
     private T _radio;
-    private T _distancia;
+    private GenericListSS _subtramos;
     private T _posXi;
     private T _posYi;
     private T _posXf;
     private T _posYf;
-    private T _subtramos;
+    private T _distancia;
     
-    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos, T pPosXi, T pPosYi, T pPosXf, T pPosYf){
+    public GenericNodeSec (T pId, T pDireccion, T pRadio, GenericListSS pSubtramos, T pPosXi,T pPosYi, T pPosXf, T pPosYf, T pDistancia){
         this._next = null;
         this._id = pId;
         this._direccion = pDireccion;
@@ -23,9 +23,10 @@ public class GenericNodeSec<T> {
         this._posYi = pPosYi;
         this._posXf = pPosXf;
         this._posYf = pPosYf;
+        
     }
     
-    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos, T pPosXi, T pPosYi, T pPosXf, T pPosYf, GenericNodeSec pNode){
+    public GenericNodeSec (T pId, T pDireccion, T pRadio,GenericListSS pSubtramos, T pPosXi, T pPosYi, T pPosXf, T pPosYf, GenericNodeSec pNode, T pDistancia){
         this._id = pId;
         this._direccion = pDireccion;
         this._radio = pRadio;
@@ -54,150 +55,90 @@ public class GenericNodeSec<T> {
         this._next = pNext;
     }
 
-    /**
-     * 
-     * @return 
-     */
-    public T getId() {
-        return _id;
-    }
+	public GenericNodeSec get_next() {
+		return _next;
+	}
+
+	public void set_next(GenericNodeSec _next) {
+		this._next = _next;
+	}
+
+	public T get_id() {
+		return _id;
+	}
+
+	public void set_id(T _id) {
+		this._id = _id;
+	}
+
+	public T get_direccion() {
+		return _direccion;
+	}
+
+	public void set_direccion(T _direccion) {
+		this._direccion = _direccion;
+	}
+
+	public T get_radio() {
+		return _radio;
+	}
+
+	public void set_radio(T _radio) {
+		this._radio = _radio;
+	}
+
+	public GenericListSS get_subtramos() {
+		return _subtramos;
+	}
+
+	public void set_subtramos(GenericListSS _subtramos) {
+		this._subtramos = _subtramos;
+	}
+
+	public T get_posXi() {
+		return _posXi;
+	}
+
+	public void set_posXi(T _posXi) {
+		this._posXi = _posXi;
+	}
+
+	public T get_posYi() {
+		return _posYi;
+	}
+
+	public void set_posYi(T _posYi) {
+		this._posYi = _posYi;
+	}
+
+	public T get_posXf() {
+		return _posXf;
+	}
+
+	public void set_posXf(T _posXf) {
+		this._posXf = _posXf;
+	}
+
+	public T get_posYf() {
+		return _posYf;
+	}
+
+	public void set_posYf(T _posYf) {
+		this._posYf = _posYf;
+	}
+
+	public T get_distancia() {
+		return _distancia;
+	}
+
+	public void set_distancia(T _distancia) {
+		this._distancia = _distancia;
+	}
 
     /**
      * 
      * @return 
      */
-    public T getDireccion() {
-        return _direccion;
-    }
+	
 
-    /**
-     * 
-     * @return 
-     */
-    public T getRadio() {
-        return _radio;
-    }
-
-    /**
-     * 
-     * @return 
-     */
-    public T getDistancia() {
-        return _distancia;
-    }
-
-    /**
-     * 
-     * @return 
-     */
-    public T getSubtramos() {
-        return _subtramos;
-    }
-
-    /**
-     * 
-     * @param pId 
-     */
-    public void setId(T pId) {
-        this._id = pId;
-    }
-
-    /**
-     * 
-     * @param pDireccion 
-     */
-    public void setDireccion(T pDireccion) {
-        this._direccion = pDireccion;
-    }
-
-    /**
-     * 
-     * @param pRadio 
-     */
-    public void setRadio(T pRadio) {
-        this._radio = pRadio;
-    }
-
-    /**
-     * 
-     * @param pDistancia 
-     */
-    public void setDistancia(T pDistancia) {
-        this._distancia = pDistancia;
-    }
-
-    /**
-     * 
-     * @param pSubtramos 
-     */
-    public void setSubtramos(T pSubtramos) {
-        this._subtramos = pSubtramos;
-    }
-
-    /**
-     * 
-     * @return 
-     */
-    public T getPosXi() {
-        return _posXi;
-    }
-
-    /**
-     * 
-     * @return 
-     */
-    public T getPosYi() {
-        return _posYi;
-    }
-
-    /**
-     * 
-     * @return 
-     */
-    public T getPosXf() {
-        return _posXf;
-    }
-
-    /**
-     * 
-     * @return 
-     */
-    public T getPosYf() {
-        return _posYf;
-    }
-
-    /**
-     * 
-     * @param pPosXi 
-     */
-    public void setPosXi(T pPosXi) {
-        this._posXi = pPosXi;
-    }
-
-    /**
-     * 
-     * @param pPosYi 
-     */
-    public void setPosYi(T pPosYi) {
-        this._posYi = pPosYi;
-    }
-
-    /**
-     * 
-     * @param pPosXf 
-     */
-    public void setPosXf(T pPosXf) {
-        this._posXf = pPosXf;
-    }
-
-    /**
-     * 
-     * @param pPosYf 
-     */
-    public void setPosYf(T pPosYf) {
-        this._posYf = pPosYf;
-    }
-
-    
-        
 }

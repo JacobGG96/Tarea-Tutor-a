@@ -26,17 +26,14 @@ public class GenericListSec<T> {
      * @param pRadio
      * @param pDistancia
      * @param pSubtramos 
-     * @param pPosXi 
-     * @param pPosYi 
-     * @param pPosXf 
-     * @param pPosYf 
      */
-    public void insertarAlFrente(T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos, T pPosXi, T pPosYi, T pPosXf, T pPosYf) {
+
+    public void insertarAlFrente(T pId, T pDireccion, T pRadio, GenericListSS pSubtramos, T pPosXi,T pPosYi, T pPosXf, T pPosYf, T pDistancia) {
         if(isEmpty()) {
-            _head = _tail = new GenericNodeSec(pId, pDireccion, pRadio, pDistancia, pSubtramos, pPosXi, pPosYi, pPosXf, pPosYf);
+        	_head = _tail = new GenericNodeSec(pId, pDireccion, pRadio, pSubtramos, pPosXi, pPosYi, pPosXf, pPosYf, pDistancia);
         }
         else {
-            GenericNodeSec nodo = new GenericNodeSec(pId, pDireccion, pRadio, pDistancia, pSubtramos, pPosXi, pPosYi, pPosXf, pPosYf, _head);//tengo una referencia al head
+            GenericNodeSec nodo = new GenericNodeSec(pId, pDireccion, pRadio, pSubtramos, pPosXi, pPosYi, pPosXf, pPosYf, pDistancia);//tengo una referencia al head
             _head = nodo;          
         }
     }
@@ -49,13 +46,16 @@ public class GenericListSec<T> {
      * @param pDistancia
      * @param pSubtramos
      */
-    public void insertarAlFinal(T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos, T pPosXi, T pPosYi, T pPosXf, T pPosYf) {
+    public void insertarAlFinal(T pId, T pDireccion, T pRadio, GenericListSS pSubtramos, T pPosXi,T pPosYi, T pPosXf, T pPosYf, T pDistancia) {
+
         if (isEmpty()) {
-            _head = _tail = new GenericNodeSec(pId, pDireccion, pRadio, pDistancia, pSubtramos, pPosXi, pPosYi, pPosXf, pPosYf);
+            _head = _tail = new GenericNodeSec(pId, pDireccion, pRadio, pSubtramos, pPosXi, pPosYi, pPosXf, pPosYf, pDistancia);
+
         }
         else {
-            GenericNodeSec nodo = new GenericNodeSec(pId, pDireccion, pRadio, pDistancia, pSubtramos, pPosXi, pPosYi, pPosXf, pPosYf);
-            _tail.setNext(nodo);
+
+            GenericNodeSec nodo = new GenericNodeSec(pId, pDireccion, pRadio, pSubtramos, pPosXi, pPosYi, pPosXf, pPosYf, pDistancia);
+            _tail.set_next(nodo);
             _tail = _tail.getNext();
         }
     }
@@ -109,10 +109,8 @@ public class GenericListSec<T> {
         else {
             GenericNodeSec actual = _head;
             while (actual != null) {
-                System.out.println((String)actual.getId() + " " + (Integer)actual.getDireccion() + " " + 
-                        (Integer)actual.getRadio() + " " + (Integer)actual.getDistancia() + "" + (Integer)actual.getSubtramos() +
-                        " " + (Integer)actual.getPosXi() + " " + (Integer)actual.getPosYi() + " " + (Integer)actual.getPosXf() + " " + (Integer)actual.getPosYf());
-                
+                System.out.println((String)actual.get_id() + " " + (Integer)actual.get_direccion() + " " + 
+                        (Integer)actual.get_radio() + " " + (Integer)actual.get_distancia() + "" + (GenericListSS)actual.get_subtramos());
                 actual = actual.getNext();
             }
         }  
