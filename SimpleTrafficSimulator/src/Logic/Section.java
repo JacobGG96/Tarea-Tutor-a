@@ -122,6 +122,7 @@ public class Section {
         }
         
         GenericNode nodoimprimir = ListaSS.getHead();
+        
         while (nodoimprimir != null){
             SubSection objeto;
             objeto = (SubSection) nodoimprimir.getDato();
@@ -130,6 +131,7 @@ public class Section {
             System.out.println(objeto.getIncline());
             System.out.println(objeto.getLanesWay());
             System.out.println(objeto.getDistance());
+            System.out.println("\n");
             nodoimprimir = nodoimprimir.getNext();
         }
         return ListaSS;

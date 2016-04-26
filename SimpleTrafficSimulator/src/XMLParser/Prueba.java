@@ -14,9 +14,9 @@ public class Prueba {
     public static void main (String args[]){
         
         XMLReader leer = new XMLReader();
-        GenericList ListaGeneral = leer.cargarXML();       
+        GenericListHw ListaGeneral = leer.cargarXML();       
         
-            GenericList ListaDatos = (GenericList) ListaGeneral.getHead().getDato();
+            GenericList ListaDatos = (GenericList) ListaGeneral.getHead().getDato;
             String x = (String) ListaDatos.getHead().getDato();
             int s = Integer.parseInt((String)ListaDatos.getHead().getNext().getDato());
             ListaDatos.imprimir();

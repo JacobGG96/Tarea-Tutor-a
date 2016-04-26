@@ -6,23 +6,35 @@ public class GenericNodeSec<T> {
     private T _direccion;
     private T _radio;
     private T _distancia;
+    private T _posXi;
+    private T _posYi;
+    private T _posXf;
+    private T _posYf;
     private T _subtramos;
     
-    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos){
+    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos, T pPosXi, T pPosYi, T pPosXf, T pPosYf){
         this._next = null;
         this._id = pId;
         this._direccion = pDireccion;
         this._radio = pRadio;
         this._distancia = pDistancia;
         this._subtramos = pSubtramos;
+        this._posXi = pPosXi;
+        this._posYi = pPosYi;
+        this._posXf = pPosXf;
+        this._posYf = pPosYf;
     }
     
-    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos, GenericNodeSec pNode){
+    public GenericNodeSec (T pId, T pDireccion, T pRadio, T pDistancia, T pSubtramos, T pPosXi, T pPosYi, T pPosXf, T pPosYf, GenericNodeSec pNode){
         this._id = pId;
         this._direccion = pDireccion;
         this._radio = pRadio;
         this._distancia = pDistancia;
         this._subtramos = pSubtramos;
+        this._posXi = pPosXi;
+        this._posYi = pPosYi;
+        this._posXf = pPosXf;
+        this._posYf = pPosYf;
         this._next = pNode;
     }
 
@@ -120,6 +132,70 @@ public class GenericNodeSec<T> {
      */
     public void setSubtramos(T pSubtramos) {
         this._subtramos = pSubtramos;
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    public T getPosXi() {
+        return _posXi;
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    public T getPosYi() {
+        return _posYi;
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    public T getPosXf() {
+        return _posXf;
+    }
+
+    /**
+     * 
+     * @return 
+     */
+    public T getPosYf() {
+        return _posYf;
+    }
+
+    /**
+     * 
+     * @param pPosXi 
+     */
+    public void setPosXi(T pPosXi) {
+        this._posXi = pPosXi;
+    }
+
+    /**
+     * 
+     * @param pPosYi 
+     */
+    public void setPosYi(T pPosYi) {
+        this._posYi = pPosYi;
+    }
+
+    /**
+     * 
+     * @param pPosXf 
+     */
+    public void setPosXf(T pPosXf) {
+        this._posXf = pPosXf;
+    }
+
+    /**
+     * 
+     * @param pPosYf 
+     */
+    public void setPosYf(T pPosYf) {
+        this._posYf = pPosYf;
     }
 
     

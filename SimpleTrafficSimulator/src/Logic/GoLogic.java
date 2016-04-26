@@ -14,17 +14,21 @@ public class GoLogic {
         
         GenericListSec lista = new GenericListSec();
         GenericListSS listass = new GenericListSS();
+        GenericListSS listass2 = new GenericListSS();
         
         listass.insertarAlFinal("Seccion1", 80, 0, 2, 250);
         listass.insertarAlFinal("Seccion2", 90, 1, 3, 250);
         
-        lista.insertarAlFinal("Recta", 160, 0, 500, listass);
-        lista.insertarAlFinal("Curva", 0, 10, 500, listass);
+        listass2.insertarAlFinal("Seccion3", 80, 0, 2, 250);
+        listass2.insertarAlFinal("Seccion4", 90, 1, 3, 250);
         
-        Highway carretera = new Highway("SJ-Cartago", 1000, 2, lista);
+        lista.insertarAlFinal("Recta", 160, 0, 500, listass, 5, 5, 30, 30);
+        lista.insertarAlFinal("Curva", 0, 10, 500, listass2, 6, 6, 31, 31);
+        
+        Highway carretera1 = new Highway("SJ-Cartago", 1000, 2, lista);
     }
     
-    /**
+    /**^
     public GoLogic() {
         
         

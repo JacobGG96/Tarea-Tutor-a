@@ -84,6 +84,8 @@ public class Highway {
      */
     private GenericList generateSectionsList(GenericListSec pSections) {
         
+        
+        
         GenericList<Section> ListaSec = new GenericList();
         
         GenericNodeSec actual = pSections.getHead();
@@ -94,6 +96,7 @@ public class Highway {
                     (Integer)actual.getRadio(),(Integer)actual.getDistancia(),(GenericListSS) actual.getSubtramos());
             
             ListaSec.insertarAlFinal(seccion);
+            
             actual = actual.getNext();
       
         }
@@ -106,6 +109,7 @@ public class Highway {
             System.out.println(objeto.getDistance());
             System.out.println(objeto.getDirection());
             System.out.println(objeto.getRadius());
+            System.out.println("\n");
             nodoimprimir = nodoimprimir.getNext();
         }
         return ListaSec;

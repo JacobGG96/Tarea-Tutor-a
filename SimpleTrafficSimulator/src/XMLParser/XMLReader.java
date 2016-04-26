@@ -11,7 +11,7 @@ import org.jdom2.input.SAXBuilder;
 
 public class XMLReader {
     public int tamañolista;
-	GenericListSS Subsection1 = new GenericListSS();
+    GenericListSS Subsection1 = new GenericListSS();
     GenericListSec section1 = new GenericListSec();
 	
     //Se crea un SAXBuilder para poder parsear el archivo
@@ -70,7 +70,7 @@ public class XMLReader {
         String _posYf = ((Element) a.getChildren()).getAttributeValue("PosYf");
         String _distancia = ((Element) a.getChildren()).getAttributeValue("Distancia");
         getsubsectiondata(a);
-        section1.insertarAlFrente(_idsec,_direccion, _radio, Subsection1, _posXi, _posYi, _posXf, _posYf, _distancia);
+        section1.insertarAlFrente(_idsec,_direccion, _radio, _distancia, Subsection1, _posXi, _posYi, _posXf, _posYf);
         
 		
 	}
