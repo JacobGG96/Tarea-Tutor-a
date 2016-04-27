@@ -12,15 +12,17 @@ import org.jdom2.input.SAXBuilder;
 @SuppressWarnings({ "rawtypes", "unchecked" })
 
 public class XMLReader {
+	
     public int tamañolista;
+    GenericListHw Highway1 = new GenericListHw();
 	GenericListSS Subsection1 = new GenericListSS();
     GenericListSec section1 = new GenericListSec();
+ 
 	
     //Se crea un SAXBuilder para poder parsear el archivo
     SAXBuilder builder = new SAXBuilder();
     Element a;
-    File xmlFile = new File( "src/XMLParser/Carreteras.xml" );
-    GenericListHw Highway1 = new GenericListHw();    
+    File xmlFile = new File( "src/XMLParser/Carreteras.xml" );  
 
     
     public GenericListHw<GenericListHw> cargarXML(){
