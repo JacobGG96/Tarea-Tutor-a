@@ -2,6 +2,7 @@ package UI;
 
 import Listas.QueueArray;
 
+@SuppressWarnings({ "rawtypes", "unchecked","unused"})
 public class MovVehiculos {
     
     

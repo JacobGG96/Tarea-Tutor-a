@@ -11,6 +11,8 @@ import Listas.QueueArray;
  *
  * @author gustavo
  */
+
+@SuppressWarnings({ "rawtypes", "unchecked","unused" })
 public class SubSection {
     
     private String _id;

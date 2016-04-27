@@ -5,8 +5,9 @@ package Listas;
  * 
  * @param <T> tipo de dato del elemento
  */
+@SuppressWarnings("rawtypes")
 public class GenericNodeHw<T> {
-    private GenericNodeHw _next;
+	private GenericNodeHw _next;
     private T _id;
     private T _distancia;
     private T _sentidos;

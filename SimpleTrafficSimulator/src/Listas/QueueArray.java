@@ -7,6 +7,8 @@ import java.lang.reflect.Array;
  * 
  * @param <T> tipo de la clase
  */
+
+@SuppressWarnings({ "unchecked" })
 public class QueueArray<T> {
     private T[] _queue;
     private int _queuesize;

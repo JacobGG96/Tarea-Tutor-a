@@ -6,6 +6,8 @@ import Listas.*;
  *
  * @author gustavo
  */
+
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class Highway {
     
     private String _id;

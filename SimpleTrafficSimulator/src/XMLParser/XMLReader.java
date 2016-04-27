@@ -9,6 +9,8 @@ import org.jdom2.Element;          // |\ Librerías
 import org.jdom2.JDOMException;    // |/ JDOM
 import org.jdom2.input.SAXBuilder;
 
+@SuppressWarnings({ "rawtypes", "unchecked" })
+
 public class XMLReader {
     public int tamañolista;
 	GenericListSS Subsection1 = new GenericListSS();

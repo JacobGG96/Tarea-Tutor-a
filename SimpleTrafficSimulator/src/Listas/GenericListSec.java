@@ -1,5 +1,6 @@
 package Listas;
 
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class GenericListSec<T> {
     private GenericNodeSec _head;
     private GenericNodeSec _tail;

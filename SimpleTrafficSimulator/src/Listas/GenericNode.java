@@ -5,6 +5,8 @@ package Listas;
  * 
  * @param <T> tipo de dato del elemento
  */
+
+@SuppressWarnings("rawtypes")
 public class GenericNode<T> {
     private GenericNode _next;
     private T _dato;

@@ -1,5 +1,6 @@
 package Listas;
 
+@SuppressWarnings({ "rawtypes" })
 public class GenericNodeSS<T> {
     
     private GenericNodeSS _next;

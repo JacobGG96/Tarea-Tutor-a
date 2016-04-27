@@ -8,9 +8,11 @@ import Listas.*;
  *
  * @author gustavo
  */
+@SuppressWarnings({ "rawtypes", "unchecked","unused" })
 public class GoLogic {
     
-    public static void main (String args[]){
+    
+	public static void main (String args[]){
         
         GenericListSec lista = new GenericListSec();
         GenericListSS listass = new GenericListSS();

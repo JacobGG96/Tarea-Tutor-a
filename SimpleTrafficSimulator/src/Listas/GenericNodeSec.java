@@ -1,5 +1,6 @@
 package Listas;
 
+@SuppressWarnings({ "rawtypes" })
 public class GenericNodeSec<T> {
 	private GenericNodeSec _next;
     private T _id;
@@ -60,7 +61,7 @@ public class GenericNodeSec<T> {
     }
 
     public void setId(T pId) {
-    	this._id = _id;
+    	this._id = pId;
     }
 
     public T getDireccion() {

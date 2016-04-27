@@ -11,6 +11,8 @@ import Listas.*;
  *
  * @author gustavo
  */
+
+@SuppressWarnings({ "rawtypes", "unchecked","unused" })
 public class Section {
     
     private String _id;

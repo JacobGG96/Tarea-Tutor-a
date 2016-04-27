@@ -1,12 +1,13 @@
 package Listas;
 
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class GenericCola<T> {
-    private GenericList _listaCola;
+	private GenericList _listaCola;
     
     /**
      * 
      */
-    public GenericCola(){
+	public GenericCola(){
         _listaCola = new GenericList();
     }
     

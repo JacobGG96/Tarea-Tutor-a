@@ -5,8 +5,10 @@ package Listas;
  * @author 
  * @param <T> 
  */
+@SuppressWarnings({"rawtypes","unchecked"})
 public class GenericList<T> {
-    private GenericNode _head;
+    
+	private GenericNode _head;
     private GenericNode _tail;
     
     /**

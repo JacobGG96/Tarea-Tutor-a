@@ -5,6 +5,8 @@ package Listas;
  * @author 
  * @param <T> 
  */
+
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class GenericListHw<T> {
     private GenericNodeHw _head;
     private GenericNodeHw _tail;
