@@ -4,14 +4,13 @@
  * and open the template in the editor.
  */
 package XMLParser;
-import Listas.*;
 /**
  *
  * @author gustavo
  */
 public class Prueba {
     
-    public static void main (String args[]){
+    /**public static void main (String args[]){
         
         XMLReader leer = new XMLReader();
         GenericListHw ListaGeneral = leer.cargarXML();       
@@ -24,6 +23,6 @@ public class Prueba {
             System.out.println(s);
             System.out.println(x);
         
-    }
+    }**/
     
 }

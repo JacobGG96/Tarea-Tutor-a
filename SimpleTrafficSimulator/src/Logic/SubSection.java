@@ -5,6 +5,8 @@
  */
 package Logic;
 
+import Listas.QueueArray;
+
 /**
  *
  * @author gustavo
@@ -16,6 +18,7 @@ public class SubSection {
     private int _incline;
     private int _lanesWay;
     private int _distance;
+    private int _freeSpace;
 
     public SubSection(String pId, int pMaxSpeed, int pIncline, int pLanesWay, int pDistance) {
         
@@ -23,7 +26,17 @@ public class SubSection {
         this._maxSpeed = pMaxSpeed;
         this._incline = pIncline;
         this._lanesWay = pLanesWay;
-        this._distance = pDistance;   
+        this._distance = pDistance;
+        this._freeSpace = pDistance;   
+
+        QueueArray<Integer> subsection = new QueueArray(Integer.class, pDistance/5);  
+
+        for (int i=0;i<((pDistance/5)+1);i++){
+
+           subsection.enqueue(i);           
+        }
+        subsection.imprimir();
+        
         
     }
 
@@ -106,7 +119,21 @@ public class SubSection {
     public void setId(String pId) {
         this._id = pId;
     }
-    
-    
+
+    /**
+     * 
+     * @return 
+     */
+    public int getFreeSpace() {
+        return _freeSpace;
+    }
+
+    /**
+     * 
+     * @param pFreeSpace 
+     */
+    public void setFreeSpace(int pFreeSpace) {
+        this._freeSpace = pFreeSpace;
+    }
     
 }
