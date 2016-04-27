@@ -31,11 +31,11 @@ public class SubSection {
 
         QueueArray<Integer> subsection = new QueueArray(Integer.class, pDistance/5);  
 
-        for (int i=0;i<((pDistance/5)+1);i++){
+        //for (int i=0;i<((pDistance/5)+1);i++){
 
-           subsection.enqueue(i);           
-        }
-        subsection.imprimir();
+          // subsection.enqueue(i);           
+        //}
+        //subsection.imprimir();
         
         
     }
