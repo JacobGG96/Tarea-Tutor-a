@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Highway>
+  <Highway1>
+    <name Name_id="HW_SJ-C">San Jose - Cartago</name>
+    <km Km="50">km</km>
+    <posX PosX="500">posY</posX>
+    <posY PosY="500">posY</posY>
+    <curve Radio="50">curve</curve>
+    <maxVel VelMax="100Km/h">maxVel</maxVel>
+  </Highway1>
+</Highway>
